@@ -1,0 +1,22 @@
+
+.detailsContainer {
+  position: relative; /* Creates a positioning context */
+}
+
+.scrollToTopButton {
+  position: fixed;
+  top: 60px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.arrow {
+  width: 50px;
+  height: 50px;
+}
+/* Example breakpoint adjustment */
+@media (max-width: 768px) {
+  .scrollToTopButton {
+    right: 10px; /* Adjust position for smaller screens */
+  }
+}

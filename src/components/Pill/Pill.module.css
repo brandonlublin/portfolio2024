@@ -1,0 +1,23 @@
+.pill {
+  color: #fff; /* Text color */
+  padding: 5px 12px;
+  font-size: 14px; /* Adjust font size as needed */
+  border-right: 1px solid #F0FD71; /* Right border */
+  font-weight: 700;
+  font-size: 14px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  line-height: 1;
+}
+
+.pill:first-child {
+  padding-left: 0;
+}
+
+.pill:last-child {
+  border-right: none;
+}
+
+.pill:hover {
+  color: #F0FD71;
+  color: #000;
+}
