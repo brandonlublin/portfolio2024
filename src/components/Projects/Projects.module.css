@@ -1,0 +1,133 @@
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  max-width: 754px;
+  max-height: 300px;
+  background-color: #2D3E37;
+  border-top: 1px solid #5C7A6E;
+  border-bottom: 1px solid #5C7A6E;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+}
+
+.languageArrowContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.arrowContainer {
+  cursor: pointer;
+}
+
+.arrowContainer:hover {
+  transform: translateX(5px); /* Adjust the amount of translation */
+}
+
+.arrowContainer:hover::before {
+  border-left-color: #C3563B; /* Change arrowhead color on hover */
+}
+
+.arrow {
+  position: relative;
+  display: inline-block;
+  width: 50px; /* Adjust width as needed */
+  height: 3px; /* Adjust height as needed */
+  background-color: #C3563B; /* Arrow color */
+  margin-right: 20px;
+}
+
+.arrow::before {
+  content: '';
+  position: absolute;
+  transform: translate(-50%, -50%);
+  right: -20px; /* Adjust based on the arrow length */
+  width: 0;
+  top: 2px;
+  height: 0;
+  margin-right: 10px;
+  border-top: 10px solid transparent; 
+  border-bottom: 10px solid transparent; 
+  border-left: 10px solid #C3563B; 
+  transition: border-left-color 0.3s ease;
+}
+
+
+.projectTitle {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 24px;
+}
+
+/* Highlight on hover */
+.projectCard:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); /* Slightly more pronounced shadow */
+  background-color: #3D4E47; /* Slightly darker background */
+}
+
+/* Dim others when a card is hovered */
+.projectCard:hover ~ .projectCard,
+.projectCard:hover + .projectCard {
+  opacity: 0.5; /* Dim other cards */
+}
+
+/* Rest of your CSS */
+.projectContent {
+  display: flex;
+  flex-direction: row;
+}
+
+.projectImg {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+  margin-right: 20px; /* Adjust spacing between image and details */
+}
+
+.projectDetails {
+  flex: 2; /* Details take up double the width of the image */
+}
+
+.description {
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 14px;
+}
+
+.languageContainer {
+  display: flex;
+  margin: 12px 0;
+}
+
+.projectHeader {
+  font-weight: 700;
+  padding: 0 20px 0 20px;
+}
+
+/* For flexbox container */
+.projectCardsContainer {
+  display: flex;
+  flex-direction: column; /* Adjust as needed for layout */
+  gap: 24px; /* Spacing between cards */
+}
+
+.projectCardsContainer:hover {
+  opacity: 1; /* Keep hovered card fully opaque */
+}
+
+@media (max-width: 1360px) {
+  .projectCard {
+    min-width: 100%; /* Two cards per row */
+    height: auto;
+  }
+
+  .projectImg {
+    width: 60px;
+    height: 60px;
+  }
+
+  .projectHeader {
+    font-size: 16px;
+  }
+
+  .arrow {
+    margin-right: 60px;
+  }
+}

@@ -1,0 +1,72 @@
+/* Global Styles */
+body, html {
+  height: 100%;
+  margin: 0;
+  background-color: #252E2B;
+  color: white;
+  overflow: hidden;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+  border-right: 1px solid #5C7A6E;
+  border-top: 23px solid #F0FD71;
+}
+
+.appContainer {
+  display: flex;
+  width: 1664px;
+  justify-content: center;
+  margin: auto;
+}
+
+.aboutMe {
+  display: flex;
+  justify-content: center;
+  width: 469px; 
+  padding: 20px;
+  margin-right: 71px;
+  box-sizing: border-box;
+}
+
+.details {
+  flex: 1; /* Let the right side grow to fill remaining space */
+  max-width: 754px;
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  padding: 0; /* Remove padding */
+  box-sizing: border-box; /* Include padding in width */
+  border-right: 1px solid #5C7A6E;
+  border-left: 1px solid #5C7A6E;
+  height: 100vh; /* Ensure it spans full height of container */
+}
+
+@media (max-width: 1224px) {
+  .appContainer {
+    flex-direction: column;
+    align-items: center; 
+    margin: 0 40px;
+  }
+  .aboutMe {
+    display: flex;
+    flex-direction: column; /* Ensure it aligns vertically if needed */
+    justify-content: center;
+    width: 100%; 
+    max-width: 754px;
+    margin-right: 0;
+    box-sizing: border-box;
+    border-right: 1px solid #5C7A6E;
+    border-left: 1px solid #5C7A6E;
+  }
+  .details {
+    display: flex;
+    flex-direction: column; /* Ensure it aligns vertically if needed */
+    width: 100%;
+    height: auto; /* Allow height to adjust to content */
+    overflow-y: auto; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    border-top: 1px solid #5C7A6E;
+  }
+}

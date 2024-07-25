@@ -1,0 +1,24 @@
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-family: 'Lemon Mocktail', Arial, sans-serif;
+  font-size: 48px;
+  color: #F0FD71;
+  margin: 14px 12px 14px 12px;
+  display: flex;
+  justify-content: center;
+}
+.ellipsis {
+  font-size: 24px;
+  color: #5C7A6E;
+}
+
+@media (max-width: 1224px) {
+  .title {
+    font-size: 36px;
+  }
+}
