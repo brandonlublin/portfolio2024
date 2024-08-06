@@ -17,7 +17,7 @@ const ProjectCard = ({ key, title, description, img, languages }) => {
           ))}
         </div>
         <div className={styles.arrowContainer}>
-          <div class={styles.arrow}></div>
+          <div className={styles.arrow}></div>
         </div>
       </div>
     </div>
