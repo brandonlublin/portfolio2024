@@ -11,7 +11,7 @@ body, html {
   display: flex;
   height: 100vh;
   border-right: 1px solid #5C7A6E;
-  border-top: 23px solid #F0FD71;
+  border-top: 23px solid #5C7A6E;
 }
 
 .appContainer {
@@ -31,15 +31,15 @@ body, html {
 }
 
 .details {
-  flex: 1; /* Let the right side grow to fill remaining space */
+  flex: 1; 
   max-width: 754px;
-  overflow-y: auto; /* Enable vertical scrolling */
-  overflow-x: hidden; /* Prevent horizontal scrolling */
-  padding: 0; /* Remove padding */
-  box-sizing: border-box; /* Include padding in width */
+  overflow-y: auto;
+  overflow-x: hidden; 
+  padding: 0; 
+  box-sizing: border-box;
   border-right: 1px solid #5C7A6E;
   border-left: 1px solid #5C7A6E;
-  height: 100vh; /* Ensure it spans full height of container */
+  height: 100vh;
 }
 
 @media (max-width: 1224px) {
@@ -50,7 +50,7 @@ body, html {
   }
   .aboutMe {
     display: flex;
-    flex-direction: column; /* Ensure it aligns vertically if needed */
+    flex-direction: column;
     justify-content: center;
     width: 100%; 
     max-width: 754px;
@@ -61,12 +61,12 @@ body, html {
   }
   .details {
     display: flex;
-    flex-direction: column; /* Ensure it aligns vertically if needed */
+    flex-direction: column;
     width: 100%;
-    height: auto; /* Allow height to adjust to content */
-    overflow-y: auto; /* Enable vertical scrolling */
-    overflow-x: hidden; /* Prevent horizontal scrolling */
-    box-sizing: border-box; /* Ensure padding is included in width */
+    height: auto;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-sizing: border-box;
     border-top: 1px solid #5C7A6E;
   }
 }

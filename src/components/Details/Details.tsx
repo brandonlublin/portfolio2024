@@ -6,6 +6,7 @@ import WorkHistoryList from '../WorkHistory/WorkHistoryList';
 import { projects, workHistory } from '../../data/data';
 import styles from './Details.module.css';
 import arrowIcon from '../../assets/icons/arrow.png';
+import HowDidIGetHere from '../HowDidIGetHere/HowDidIGetHere';
 const Details = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
   const handleScroll = () => {
@@ -22,16 +23,19 @@ const Details = () => {
 
   useEffect(() => {
     const detailsElement = document.querySelector('.details');
-    detailsElement.addEventListener('scroll', handleScroll);
+    detailsElement.addEventListener('scroll', handleScroll);``
 
     return () => detailsElement.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
     <div className={styles.detailsContainer}>
-      <Title titleText={'Projects'}/>
       <ProjectList projects={projects} />
-      <Title titleText={'How did i get here?'}/>
+      <Title titleText={'How did I get here?'}/>
+      <HowDidIGetHere />
+      <Title titleText={'What makes me tick'} />
+      <ProjectList projects={projects} />
+      <Title titleText={'What my peers are saying'} />
       {showScrollButton && (
         <a onClick={scrollToTop} className={styles.scrollToTopButton}>
           <img className={styles.arrow} src={arrowIcon} />

@@ -1,9 +1,15 @@
+import recipeIcon from '../assets/icons/recipe.png';
+import reactIcon from '../assets/icons/react.png';
+import typescriptIcon from '../assets/icons/typescript.png';
+import rubyIcon from '../assets/icons/ruby.png';
+
 export const projects = [
   {
     id: 1,
-    title: "Spotify Data Visualizer",
-    description: "This is project 1",
-    img: "https://via.placeholder.com/150",
+    title: "Recipe Finder",
+    description: "Just a simple recipe finder, that allows the user to search for recipes, filter recipes by ingredients, cuisine, dietary restrictions, and more.",
+    img: recipeIcon,
+    imgAlt: "recipe icon",
     languages: ["React", "TypeScript"],
   },
   {
@@ -11,14 +17,8 @@ export const projects = [
     title: "WeatherSpot",
     description: "This is project 1",
     img: "https://via.placeholder.com/151",
+    imgAlt: "weatherSpot icon",
     languages: ["React", "TypeScript", "Node", "Express"],
-  },
-  {
-    id: 3,
-    title: "Train Scheduler",
-    description: "This is project 1",
-    img: "https://via.placeholder.com/152",
-    languages: ["React", "TypeScript"],
   },
 ];
 
@@ -40,6 +40,24 @@ export const workHistory = [
     description: "I work on the Expeditors EDI team.",
   },
 ];
+
+export const languageIcons = [
+  {
+    id: 1,
+    name: "React Icon",
+    img: reactIcon,
+  },
+  {
+    id: 2,
+    name: "TypeScript Icon",
+    img: typescriptIcon,
+  },
+  {
+    id: 4,
+    name: "Ruby Icon",
+    img: rubyIcon,
+  },
+]
 
 export const quirks = ['4 Years of Experience', 'B2B SaaS', 'Interpersonal Communication Expert']
 

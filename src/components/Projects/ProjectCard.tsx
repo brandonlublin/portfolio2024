@@ -1,12 +1,14 @@
 import styles from './Projects.module.css';
 import Pill from '../Pill/Pill';
-const ProjectCard = ({ key, title, description, img, languages }) => {
+const ProjectCard = ({ key, title, description, img, languages, imgAlt }) => {
   return (
     <div className={styles.projectCard} id={key}>
       <div className={styles.projectContent}>
         <div className={styles.projectDetails}>
-        <img className={styles.projectImg} src={img} alt={title} />
-          <h3 className={styles.projectTitle}>{title}</h3>
+          <div className={styles.projectTopRow}>         
+            <img className={styles.projectImg} src={img} alt={imgAlt} />
+            <h3 className={styles.projectTitle}>{title}</h3>
+          </div>
           <p className={styles.description}>{description}</p>
         </div>
       </div>

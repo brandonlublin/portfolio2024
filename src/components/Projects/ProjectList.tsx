@@ -6,7 +6,7 @@ const ProjectList = ({ projects }) => {
     <>
       <div className={styles.projectCardsContainer}>
         {projects.map((project) => (
-          <ProjectCard key={project.id} title={project.title} img={project.img} description={project.description} languages={project.languages} />
+          <ProjectCard key={project.id} title={project.title} img={project.img} imgAlt={project.imgAlt} description={project.description} languages={project.languages} />
         ))}
       </div>
     </>
