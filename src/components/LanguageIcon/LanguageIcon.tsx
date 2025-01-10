@@ -1,7 +1,7 @@
 import styles from './LanguageIcon.module.css';
-const LanguageIcon = ({ language, key }) => {
+const LanguageIcon = ({ language, id }) => {
   return (
-    <img className={styles.languageIcon} key={key} src={language.img} alt={language.name} />
+    <img className={styles.languageIcon} key={id} src={language.img} alt={language.name} />
   );
 }
 

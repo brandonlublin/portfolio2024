@@ -11,12 +11,12 @@ const AboutMe = () => {
       <h2 className={styles.title}>Senior Frontend Engineer</h2>
       <div className={styles.quirksContainer}>
         {quirks.map((quirk, index) => (
-          <Pill data={quirk} key={index} />
+          <Pill data={quirk} key={index} id={index} />
         ))}
       </div>
       <div className={styles.languagesContainer}>
         {languageIcons.map((language, index) => (
-          <LanguageIcon language={language} key={index} />
+          <LanguageIcon language={language} key={index} id={index} />
         ))}
       </div>
     </div>

@@ -24,8 +24,8 @@ const LinkButton = () => {
 
   return (
     <div className={styles.linkContainer}>
-      {profiles.map((profile) => (
-        <a className={styles.profileLink} target="#" href={profile.url}>
+      {profiles.map((profile, index) => (
+        <a key={index} className={styles.profileLink} target="#" href={profile.url}>
           <img className={styles.icon} src={profile.icon} />
         </a>
       ))}
