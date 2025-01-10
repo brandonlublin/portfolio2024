@@ -1,7 +1,8 @@
 import styles from './AboutMe.module.css';
 import Pill from '../Pill/Pill';
 import LinkButton from '../LinkButton/LinkButton';
-import { quirks } from '../../data/data';
+import LanguageIcon from '../LanguageIcon/LanguageIcon';
+import { quirks, languageIcons } from '../../data/data';
 const AboutMe = () => {
   return (
     <div>
@@ -10,7 +11,12 @@ const AboutMe = () => {
       <h2 className={styles.title}>Senior Frontend Engineer</h2>
       <div className={styles.quirksContainer}>
         {quirks.map((quirk, index) => (
-          <Pill data={quirk} key={index} />
+          <Pill data={quirk} key={index} id={index} />
+        ))}
+      </div>
+      <div className={styles.languagesContainer}>
+        {languageIcons.map((language, index) => (
+          <LanguageIcon language={language} key={index} id={index} />
         ))}
       </div>
     </div>

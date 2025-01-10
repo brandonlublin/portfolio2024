@@ -1,0 +1,15 @@
+.howIGotHere {
+  display: flex;
+  flex-direction: row;
+  margin: 0 32px;
+  gap: 32px;
+  font-family: 'MADE TOMMY', sans-serif;
+}
+
+.selfie {
+  width: 200px;;
+}
+
+.selfBlurb {
+  margin: 24px 24px 0 0
+}

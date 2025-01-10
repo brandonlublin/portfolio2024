@@ -1,20 +1,27 @@
-.titleContainer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.headerSection {
+  padding: 32px 32px 0 32px;
+  text-align: left;
+  position: relative;
+  border-top: 1px solid #5C7A6E;
+  border-bottom: 1px solid #5C7A6E;
 }
 
-.title {
-  font-family: 'Lemon Mocktail', Arial, sans-serif;
-  font-size: 48px;
-  color: #F0FD71;
-  margin: 14px 12px 14px 12px;
-  display: flex;
-  justify-content: center;
+.headerSection h2 {
+  color: white;
+  font-size: 30px;
+  margin-top: 32px;
+  font-family: 'MADE Tommy', sans-serif;
+  font-weight: 400;
 }
-.ellipsis {
-  font-size: 24px;
-  color: #5C7A6E;
+
+.headerSection .underline {
+  position: absolute;
+  top: 40%;
+  margin-left: 16px;
+  width: 30px;
+  height: 2px;
+  background-color: #A8B03A; 
+  transform: translate(-50%, -100%); 
 }
 
 @media (max-width: 1224px) {

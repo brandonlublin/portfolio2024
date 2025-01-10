@@ -1,12 +1,12 @@
 import React from 'react';
 import ProjectCard from './ProjectCard';
 import styles from './Projects.module.css';
-const ProjectList = ({ projects }) => {
+const ProjectList = ({ projects, onSelectProject }) => {
   return (
     <>
       <div className={styles.projectCardsContainer}>
-        {projects.map((project) => (
-          <ProjectCard key={project.id} title={project.title} img={project.img} description={project.description} languages={project.languages} />
+        {projects.map((project, index) => (
+          <ProjectCard key={index} project={project} onSelectProject={onSelectProject} />
         ))}
       </div>
     </>

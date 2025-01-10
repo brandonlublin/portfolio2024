@@ -1,7 +1,7 @@
 import styles from './Pill.module.css';
-const Pill = ({ key, data }) => {
+const Pill = ({ id, data }) => {
   return (
-    <span className={styles.pill}>{data}</span>
+    <span key={`${id + data}`} className={styles.pill}>{data}</span>
   );
 }
 

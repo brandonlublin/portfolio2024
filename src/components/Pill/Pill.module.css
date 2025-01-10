@@ -1,12 +1,13 @@
 .pill {
-  color: #fff; /* Text color */
+  color: #fff;
   padding: 5px 12px;
-  font-size: 14px; /* Adjust font size as needed */
-  border-right: 1px solid #F0FD71; /* Right border */
+  font-size: 14px;
+  border-right: 1px solid #B5BE5F;
   font-weight: 700;
   font-size: 14px;
   font-family: 'Open Sans', Arial, sans-serif;
   line-height: 1;
+  cursor: default;
 }
 
 .pill:first-child {
@@ -15,9 +16,4 @@
 
 .pill:last-child {
   border-right: none;
-}
-
-.pill:hover {
-  color: #F0FD71;
-  color: #000;
 }

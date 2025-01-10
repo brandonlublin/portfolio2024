@@ -1,7 +1,7 @@
 .name {
   font-family: 'Lemon Mocktail', Arial, sans-serif;
   font-size: 100px;
-  color: #F0FD71;
+  color: #B5BE5F;
   margin: 0 0 20px 0;
 }
 
@@ -12,6 +12,14 @@
 }
 
 .quirksContainer {
+  width: 515px;
+  font-family: 'Open Sans', Arial, sans-serif;
+  font-size: 14px;
+}
+
+.languagesContainer {
+  display: flex;
+  margin-top: 32px;
   width: 515px;
   font-family: 'Open Sans', Arial, sans-serif;
   font-size: 14px;
