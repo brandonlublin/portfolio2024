@@ -71,18 +71,12 @@ body, html {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .appContainer {
     overflow: hidden;
     display: flex;
     flex-direction: column;
     height: 100vh;
     margin: 0 10px;
-  }
-  .aboutMe {
-
-  }
-  .details {
-
   }
 }
