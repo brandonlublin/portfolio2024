@@ -17,7 +17,7 @@
 }
 @media (max-width: 768px) {
   .scrollToTopButton {
-    right: 10px; 
+    right: 16px; 
   }
   .arrow {
     width: 30px;
