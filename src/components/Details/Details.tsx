@@ -34,8 +34,9 @@ const Details = ({ selectedProject, openProjectDetails }) => {
 
   return (
     <div className={styles.detailsContainer}>
+      <Title titleText={'my projects'}/>
       <ProjectList projects={projects} onSelectProject={openProjectDetails}/>
-      <Title titleText={'How did I get here?'}/>
+      <Title titleText={'crafting my career path'}/>
       <HowDidIGetHere />
       <Title titleText={'What makes me tick'} />
       <CollapsibleSkills skills={skills} />
@@ -43,8 +44,10 @@ const Details = ({ selectedProject, openProjectDetails }) => {
       {showScrollButton && (
         <a onClick={scrollToTop} className={styles.scrollToTopButton}>
           <img className={styles.arrow} src={arrowIcon} />
+          <div>Back to Top</div>
         </a>
       )}
+      <div></div>
     </div>
   );
 }

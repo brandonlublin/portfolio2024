@@ -43,6 +43,20 @@ body, html {
   height: 100vh;
 }
 
+.projectDetails {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #252E2B;
+  z-index: 100; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
 @media (max-width: 1224px) {
   .appContainer {
     flex-direction: column;
@@ -56,6 +70,7 @@ body, html {
     width: 100%; 
     max-width: 754px;
     margin-right: 0;
+    margin-bottom: 48px;
     box-sizing: border-box;
     border-right: 1px solid #5C7A6E;
     border-left: 1px solid #5C7A6E;

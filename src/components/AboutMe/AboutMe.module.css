@@ -6,14 +6,14 @@
 }
 
 .title {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: 'Avenir Roman', sans-serif;
   font-size: 30px;
   margin-top: 0;
 }
 
 .quirksContainer {
   width: 515px;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: 'Avenir Roman', sans-serif;
   font-size: 14px;
 }
 
@@ -21,7 +21,7 @@
   display: flex;
   margin-top: 32px;
   width: 515px;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: 'Avenir Roman', sans-serif;
   font-size: 14px;
 }
 

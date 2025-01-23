@@ -7,6 +7,15 @@
 }
 
 @font-face {
+  font-family: 'Avenir Roman';
+  src: url('../assets/fonts/avenir-font/AvenirLTStd-Roman.woff2') format('woff2'),
+       url('../assets/fonts/avenir-font/AvenirLTStd-Roman.woff') format('woff'),
+       url('../assets/fonts/avenir-font/AvenirLTStd-Roman.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Open Sans';
   src: url('../assets/fonts/Open_Sans (1)/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
   font-weight: normal;

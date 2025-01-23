@@ -1,26 +1,37 @@
 
 .detailsContainer {
   position: relative; 
-  border-bottom: 1px solid #5C7A6E;
 }
 
 .scrollToTopButton {
-  position: fixed;
-  top: 30px;
-  right: 10px;
+  font-family: 'Avenir Roman', sans-serif;
   cursor: pointer;
+  margin: 36px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 48px;
+  flex-direction: column;
+}
+
+.scrollToTopButton img {
+  width: 24px;
+  height: 24px;
+  padding: 5px;
 }
 
 .arrow {
   width: 40px;
   height: 40px;
+  background-color: #B86E5C;
+  border: none;
+  border-radius: 50%;
+  margin-bottom: 12px;
 }
+
 @media (max-width: 768px) {
-  .scrollToTopButton {
-    right: 16px; 
-  }
-  .arrow {
-    width: 30px;
-    height: 30px;
+  .detailsContainer {
+    border-right: 1px solid #5C7A6E;
   }
 }

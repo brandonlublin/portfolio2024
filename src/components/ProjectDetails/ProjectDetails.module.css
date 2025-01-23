@@ -4,10 +4,11 @@
   align-items: center;
   padding: 20px;
   background-color: #3D4E47;
+  border-right: 1px solid #5C7A6E;
 }
 
 .projectDetailsContent {
-  font-family: 'MADE TOMMY', sans-serif;
+  font-family: 'Avenir Roman', sans-serif;
   width: auto;
   background-color: #3D4E47;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -178,4 +179,10 @@
 .backButton:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .detailsContainer {
+    border-right: 1px solid #5C7A6E;
+  }
 }
