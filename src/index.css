@@ -8,10 +8,8 @@ body, html {
 }
 
 .app {
-  display: flex;
   height: 100vh;
   border-right: 1px solid #5C7A6E;
-  border-top: 23px solid #5C7A6E;
 }
 
 .appContainer {
@@ -26,7 +24,7 @@ body, html {
   display: flex;
   justify-content: center;
   width: 469px; 
-  padding: 20px;
+  padding: 50px;
   margin-right: 71px;
   box-sizing: border-box;
 }

@@ -30,8 +30,10 @@
 }
 
 .projectTitle {
-  font-size: 2rem;
+  font-size: 24px;
   font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'DIN Condensed Alt', sans-serif;
 }
 
 .projectDescription {

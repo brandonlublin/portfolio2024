@@ -2,8 +2,8 @@ import AboutMe from "../components/AboutMe/AboutMe";
 import Details from "../components/Details/Details";
 import { useState } from 'react';
 import ProjectDetails from "../components/ProjectDetails/ProjectDetails";
-
 import '../index.css';
+import Header from '../components/Header/Header';
 const Home = () => {
   const [selectedProject, setSelectedProject] = useState(null);
 
@@ -17,6 +17,7 @@ const Home = () => {
 
   return (
     <div className='app'>
+      <Header />
       <div className='appContainer'>
         {selectedProject ? (
           <ProjectDetails project={selectedProject} onBack={closeProjectDetails} />

@@ -1,0 +1,14 @@
+.header {
+  height: 86px;
+  background-color: #5C7A6E;
+  width: 100%;
+}
+
+.headerContainer {
+  max-width: 1310px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  height: inherit;
+}

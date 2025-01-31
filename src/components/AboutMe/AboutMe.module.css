@@ -1,14 +1,25 @@
 .name {
-  font-family: 'Lemon Mocktail', Arial, sans-serif;
+  font-family: 'DIN Condensed', sans-serif;
   font-size: 100px;
-  color: #B5BE5F;
-  margin: 0 0 20px 0;
+  text-transform: uppercase;
+  line-height: 100px;
+  margin-top: 48px;
+  height: 152px;
+  padding-top: 23px;
+  border-left: 8px solid #B86E5C;
+}
+
+.nameContainer { 
+  display: flex;
+  margin: 2px;
+  align-items: center;
+  height: 275px;
 }
 
 .title {
   font-family: 'Avenir Roman', sans-serif;
   font-size: 30px;
-  margin-top: 0;
+  margin-top: 50px;
 }
 
 .quirksContainer {

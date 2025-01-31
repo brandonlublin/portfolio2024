@@ -5,10 +5,9 @@ import LanguageIcon from '../LanguageIcon/LanguageIcon';
 import { quirks, languageIcons } from '../../data/data';
 const AboutMe = () => {
   return (
-    <div>
-      <LinkButton />
-      <h1 className={styles.name}>Brandon Lublin</h1>
-      <h2 className={styles.title}>Senior Frontend Engineer</h2>
+    <>
+      <div className={styles.name}>Brandon Lublin</div>
+      <div className={styles.title}>Senior Frontend Engineer</div>
       <div className={styles.quirksContainer}>
         {quirks.map((quirk, index) => (
           <Pill data={quirk} key={index} id={index} />
@@ -19,7 +18,7 @@ const AboutMe = () => {
           <LanguageIcon language={language} key={index} id={index} />
         ))}
       </div>
-    </div>
+    </>
   );
 }
 
