@@ -1,18 +1,15 @@
-.detailsContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  background-color: #3D4E47;
-}
-
 .projectDetailsContent {
-  font-family: 'MADE TOMMY', sans-serif;
-  width: auto;
+  font-family: 'DIN Condensed Alternate', sans-serif;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+  overflow: hidden;
+  color: white;
   background-color: #3D4E47;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-top: 20px;
+  border: 1px solid #5C7A6E;
 }
 
 .projectHeader {
@@ -28,90 +25,31 @@
 }
 
 .projectTitle {
-  font-size: 2rem;
+  font-size: 32px;
   font-weight: bold;
+  text-transform: uppercase;
+  font-family: 'DIN Condensed Alternate', sans-serif;
+  border-left: 6px solid #B86E5C;
+  padding-left: 6px;
+  line-height: 26px;
 }
 
 .projectDescription {
   font-size: 1.1rem;
   margin-bottom: 20px;
+  font-family: 'Geist Mono', monospace;
 }
 
-.projectDetailsContent {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto; 
-  padding: 20px;
-  box-sizing: border-box;
-  overflow: hidden; 
-  color: white;
-  background-color: #3D4E47; 
-}
-.projectLongDescription code {
-  padding: 4px 8px;
-  border-radius: 4px;
-  font-size: 1rem;
-  white-space: pre-wrap;
-  word-wrap: break-word; 
-  max-width: 100%;
-  overflow-wrap: break-word;
-}
-
-.projectLongDescription pre {
-  padding: 16px;
-  border-radius: 4px;
-  font-size: 1rem;
-  white-space: pre-wrap;
-  word-wrap: break-word; 
-  max-width: 100%; 
-  overflow-wrap: break-word; 
-  box-sizing: border-box;
-}
-.projectLongDescription {
-  line-height: 1.6;
-  word-wrap: break-word;
-}
-
-.projectLongDescription h3 {
-  font-size: 1.5rem;
-  margin-top: 20px;
-  margin-bottom: 10px;
-}
-
-.projectLongDescription ul {
-  list-style-type: disc;
-  padding-left: 20px;
-}
-
-.projectLongDescription li {
-  margin-bottom: 8px;
-}
-
-.projectLongDescription a {
-  color: #007bff;
-  text-decoration: none;
-}
-
-.projectLongDescription a:hover {
-  text-decoration: underline;
-}
-
-.projectLongDescription img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 10px 0;
-}
-
-
-.projectCapabilities,
 .projectResearch {
-  margin-top: 20px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-family: 'Geist Mono', monospace;
 }
 
-.sectionTitle {
-  font-size: 1.3rem;
-  font-weight: bold;
+.sectionLabel {
+  font-size: 24px;
+  font-family: 'Din Condensed Alternate', sans-serif;
+  text-transform: uppercase;
   margin-bottom: 10px;
 }
 
@@ -135,6 +73,7 @@
   font-size: 0.9rem;
   margin-top: 10px;
   color: #666;
+  font-family: 'Geist Mono', monospace;
 }
 
 .gitHubLink {
@@ -145,7 +84,7 @@
 .gitHubLink a {
   font-size: 1.1rem;
   font-weight: bold;
-  color: #C3563B;
+  color: #5C7A6E;
   text-decoration: none;
 }
 
@@ -157,7 +96,7 @@
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: #C3563B;
+  color: #5C7A6E;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -171,10 +110,16 @@
 .icon {
   font-size: 1.8rem;
   display: inline-block;
-  margin-right: 8px; /* Space between icon and potential label */
+  margin-right: 8px;
 }
 
 .backButton:focus {
   outline: none;
   box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .projectDetailsContent {
+    padding: 15px;
+  }
 }

@@ -1,31 +1,27 @@
 .headerSection {
-  padding: 32px 32px 0 32px;
-  text-align: left;
+  display: flex;
+  justify-content: center;
+  padding: 42px;
   position: relative;
+  background-color: #2D3A36;
   border-top: 1px solid #5C7A6E;
   border-bottom: 1px solid #5C7A6E;
+  font-family: 'DIN Condensed Alternate', sans-serif;
+  font-size: 32px;
+  text-transform: uppercase;
 }
 
 .headerSection h2 {
   color: white;
   font-size: 30px;
-  margin-top: 32px;
-  font-family: 'MADE Tommy', sans-serif;
   font-weight: 400;
 }
 
-.headerSection .underline {
-  position: absolute;
-  top: 40%;
-  margin-left: 16px;
-  width: 30px;
-  height: 2px;
-  background-color: #A8B03A; 
-  transform: translate(-50%, -100%); 
-}
-
-@media (max-width: 1224px) {
+@media (max-width: 1700px) {
   .title {
     font-size: 36px;
+  }
+  .headerSection:first-child {
+    border-top: none;
   }
 }

@@ -2,10 +2,11 @@
   color: #fff;
   padding: 5px 12px;
   font-size: 14px;
-  border-right: 1px solid #B5BE5F;
+  border-right: 1px solid #5C7A6E;
   font-weight: 700;
   font-size: 14px;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: 'DIN Condensed Alternate', sans-serif;
+  text-transform: uppercase;
   line-height: 1;
   cursor: default;
 }

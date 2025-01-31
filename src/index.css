@@ -8,10 +8,8 @@ body, html {
 }
 
 .app {
-  display: flex;
   height: 100vh;
   border-right: 1px solid #5C7A6E;
-  border-top: 23px solid #5C7A6E;
 }
 
 .appContainer {
@@ -19,13 +17,14 @@ body, html {
   width: 1664px;
   justify-content: center;
   margin: auto;
+  height: 100vh;
 }
 
 .aboutMe {
   display: flex;
   justify-content: center;
   width: 469px; 
-  padding: 20px;
+  padding: 50px;
   margin-right: 71px;
   box-sizing: border-box;
 }
@@ -42,11 +41,25 @@ body, html {
   height: 100vh;
 }
 
-@media (max-width: 1224px) {
+.projectDetails {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #252E2B;
+  z-index: 100; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 1;
+}
+
+@media (max-width: 1700px) {
   .appContainer {
     flex-direction: column;
     align-items: center; 
-    margin: 0 40px;
+    margin: 0;
   }
   .aboutMe {
     display: flex;

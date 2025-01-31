@@ -1,33 +1,49 @@
 .name {
-  font-family: 'Lemon Mocktail', Arial, sans-serif;
+  font-family: 'DIN Condensed', sans-serif;
   font-size: 100px;
-  color: #B5BE5F;
-  margin: 0 0 20px 0;
+  text-transform: uppercase;
+  line-height: 100px;
+  height: 152px;
+  padding-top: 23px;
+  border-left: 8px solid #B86E5C;
+  text-shadow: 
+  2px 2px 4px rgba(0, 0, 0, 0.5), 
+  -2px -2px 4px rgba(255, 255, 255, 0.2);
+}
+
+.nameContainer { 
+  display: flex;
+  margin: 2px;
+  align-items: center;
+  height: 275px;
 }
 
 .title {
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: 'DIN Condensed Alternate', sans-serif;
+  text-transform: uppercase;
   font-size: 30px;
-  margin-top: 0;
+  margin-top: 50px;
 }
 
 .quirksContainer {
   width: 515px;
-  font-family: 'Open Sans', Arial, sans-serif;
   font-size: 14px;
+  margin-top: 24px;
 }
 
 .languagesContainer {
   display: flex;
   margin-top: 32px;
   width: 515px;
-  font-family: 'Open Sans', Arial, sans-serif;
   font-size: 14px;
 }
 
-@media (max-width: 1224px) {
+@media (max-width: 1700px) {
   .name {
     font-size: 60px;
+    line-height: 60px;
+    height: 30px;
+    padding-top: 15px;
   }
   .title {
     font-size: 20px;

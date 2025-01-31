@@ -7,6 +7,15 @@
 }
 
 @font-face {
+  font-family: 'Avenir Roman';
+  src: url('../assets/fonts/avenir-font/AvenirLTStd-Roman.woff2') format('woff2'),
+       url('../assets/fonts/avenir-font/AvenirLTStd-Roman.woff') format('woff'),
+       url('../assets/fonts/avenir-font/AvenirLTStd-Roman.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Open Sans';
   src: url('../assets/fonts/Open_Sans (1)/OpenSans-VariableFont_wdth,wght.ttf') format('truetype');
   font-weight: normal;
@@ -19,5 +28,40 @@
        url('../assets/fonts/made_tommy/MADETommy-Regular.woff') format('woff'),
        url('../assets/fonts/made_tommy/MADETommy-Regular.ttf') format('truetype');
   font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Condensed';
+  src: url('../assets/fonts/din-condensed/DIN-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Condensed Bold';
+  src: url('../assets/fonts/din-condensed/DIN-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN Condensed Alt';
+  src: url('../assets/fonts/din-condensed/DIN-BlackAlternate.ttf') format('truetype');
+  font-weight: 900; /* Black is usually 900 */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Geist Mono';
+  src: url('../assets/fonts/Geist_Mono/GeistMono-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('../assets/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf') format('truetype');
+  font-weight: 900; /* Black is usually 900 */
   font-style: normal;
 }

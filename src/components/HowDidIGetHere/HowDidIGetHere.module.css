@@ -1,13 +1,26 @@
 .howIGotHere {
   display: flex;
   flex-direction: row;
-  margin: 0 32px;
+  padding: 0 32px;
   gap: 32px;
-  font-family: 'MADE TOMMY', sans-serif;
+  margin-bottom: 60px;
+  background-color: #2D3A36;
+  border-bottom: 1px solid #5C7A6E;
+  font-family: 'Geist Mono', monospace;
 }
 
 .selfie {
-  width: 200px;;
+  margin-right: 20px;
+  width: 200px;
+  padding: 36px 0 36px 0;
+  border-right: 1px solid #5C7A6E;
+  border-left: 1px solid #5C7A6E;
+}
+
+.selfie img {
+  border: 1px solid #5C7A6E;
+  width: 100%; 
+  height: auto;
 }
 
 .selfBlurb {
@@ -21,8 +34,7 @@
   }
 
   .selfie {
-    width: 200px;
-    margin: 24px 0 0 0;
+    width: 250px;
   }
 
   .selfBlurb {
