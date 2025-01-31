@@ -57,7 +57,8 @@
 
 
 .projectTitle {
-  font-family: 'Avenir Roman', sans-serif;
+  font-family: 'DIN Condensed Alternate', sans-serif;
+  text-transform: uppercase;
   font-size: 24px;
   font-weight: bold;
   text-transform: uppercase;
@@ -94,8 +95,7 @@
 }
 
 .description {
-  font-family: 'Avenir Roman', sans-serif;
-  font-weight: 400;
+  font-family: 'Geist Mono', monospace;
   font-size: 14px;
   width: auto;
 }
@@ -103,7 +103,6 @@
 .languageContainer {
   display: flex;
   margin: 12px 0;
-  font-family: 'Avenir Roman', sans-serif;
 }
 
 .projectHeader {
@@ -122,7 +121,7 @@
   opacity: 1; 
 }
 
-@media (max-width: 1360px) {
+@media (max-width: 1700px) {
   .projectCard {
     height: auto;
     width: auto;

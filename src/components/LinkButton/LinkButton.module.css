@@ -27,7 +27,7 @@
   height: 35px;
 }
 
-@media (max-width: 1224px) {
+@media (max-width: 1700px) {
   .profileLink {
     width: 40px;
     height: 40px;

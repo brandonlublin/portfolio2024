@@ -13,7 +13,7 @@ const ProjectDetails = ({ project, onBack }) => {
       </div>
       <div className={styles.projectDescription}>{project.description}</div>
       <div className={styles.projectResearch}>
-        <h3>Research</h3>
+        <div className={styles.sectionLabel}>Research</div>
         {project?.research.map((research, index) => (
           <div key={index}>
             <li>{research}</li>
@@ -21,7 +21,7 @@ const ProjectDetails = ({ project, onBack }) => {
         ))}
       </div>
       <div className={styles.projectResearch}>
-        <h3>Capabilities</h3>
+        <div className={styles.sectionLabel}>Capabilities</div>
         {project?.capabilities.map((capability, index) => (
           <div key={index}>
             <li>{capability}</li>

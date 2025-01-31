@@ -5,7 +5,8 @@
   border-right: 1px solid #5C7A6E;
   font-weight: 700;
   font-size: 14px;
-  font-family: 'Avenir Roman', sans-serif;
+  font-family: 'DIN Condensed Alternate', sans-serif;
+  text-transform: uppercase;
   line-height: 1;
   cursor: default;
 }

@@ -3,10 +3,12 @@
   font-size: 100px;
   text-transform: uppercase;
   line-height: 100px;
-  margin-top: 48px;
   height: 152px;
   padding-top: 23px;
   border-left: 8px solid #B86E5C;
+  text-shadow: 
+  2px 2px 4px rgba(0, 0, 0, 0.5), 
+  -2px -2px 4px rgba(255, 255, 255, 0.2);
 }
 
 .nameContainer { 
@@ -17,28 +19,31 @@
 }
 
 .title {
-  font-family: 'Avenir Roman', sans-serif;
+  font-family: 'DIN Condensed Alternate', sans-serif;
+  text-transform: uppercase;
   font-size: 30px;
   margin-top: 50px;
 }
 
 .quirksContainer {
   width: 515px;
-  font-family: 'Avenir Roman', sans-serif;
   font-size: 14px;
+  margin-top: 24px;
 }
 
 .languagesContainer {
   display: flex;
   margin-top: 32px;
   width: 515px;
-  font-family: 'Avenir Roman', sans-serif;
   font-size: 14px;
 }
 
-@media (max-width: 1224px) {
+@media (max-width: 1700px) {
   .name {
     font-size: 60px;
+    line-height: 60px;
+    height: 30px;
+    padding-top: 15px;
   }
   .title {
     font-size: 20px;

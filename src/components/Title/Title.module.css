@@ -1,22 +1,23 @@
 .headerSection {
   display: flex;
   justify-content: center;
-  padding: 24px;
+  padding: 42px;
   position: relative;
   background-color: #2D3A36;
   border-top: 1px solid #5C7A6E;
   border-bottom: 1px solid #5C7A6E;
+  font-family: 'DIN Condensed Alternate', sans-serif;
+  font-size: 32px;
   text-transform: uppercase;
 }
 
 .headerSection h2 {
   color: white;
   font-size: 30px;
-  font-family: 'Avenir Roman', sans-serif;
   font-weight: 400;
 }
 
-@media (max-width: 1224px) {
+@media (max-width: 1700px) {
   .title {
     font-size: 36px;
   }
