@@ -3,6 +3,13 @@ import Pill from '../Pill/Pill';
 import LinkButton from '../LinkButton/LinkButton';
 import LanguageIcon from '../LanguageIcon/LanguageIcon';
 import { quirks, languageIcons } from '../../data/data';
+
+type Language = {
+  id: number;
+  name: string;
+  icon: string;
+};
+
 const AboutMe = () => {
   return (
     <div className={styles.aboutMeContainer}>
@@ -14,12 +21,12 @@ const AboutMe = () => {
         ))}
       </div>
       <div className={styles.languagesContainer}>
-        {languageIcons.map((language, index) => (
-          <LanguageIcon language={language} key={index} id={index} />
+        {languageIcons.map((language) => (
+          <LanguageIcon language={language} key={language.id} id={language.id} />
         ))}
       </div>
     </div>
   );
-}
+};
 
 export default AboutMe;

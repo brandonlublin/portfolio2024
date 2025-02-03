@@ -2,6 +2,9 @@ import recipeIcon from '../assets/icons/recipe.png';
 import reactIcon from '../assets/icons/react.png';
 import typescriptIcon from '../assets/icons/typescript.png';
 import rubyIcon from '../assets/icons/ruby.png';
+import githubIcon from '../assets/icons/github.png';
+import linkedinIcon from '../assets/icons/linkedin.png';
+import resumeIcon from '../assets/icons/resume.png';
 
 export const projects = [
   {
@@ -66,6 +69,23 @@ export const projects = [
   },
 ];
 
+export const profiles = [
+  {
+    url: 'https://www.linkedin.com/in/brandon-lublin-78a550a8/',
+    icon: linkedinIcon,
+    alt: 'linkedin icon'
+  },
+  {
+    url: 'https://github.com/brandonlublin',
+    icon: githubIcon,
+    alt: 'github icon'
+  },
+  {
+    url: '#',
+    icon: resumeIcon,
+    alt: 'resume icon'
+  }
+];
 
 export const workHistory = [
   {
@@ -104,7 +124,7 @@ export const languageIcons = [
   },
 ]
 
-export const quirks = ['4 Years of Experience', 'B2B SaaS', 'Interpersonal Communication Expert']
+export const quirks = ['4 Years of Experience', 'Interpersonal Communication Expert', 'B2B SaaS']
 
 export const links = [
   { 

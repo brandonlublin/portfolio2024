@@ -1,7 +1,17 @@
 import styles from './CollapsibleSkills.module.css';
 import { useState } from 'react';
 
-const CollapsibleSkills = ({ skills }) => {
+type Skill = {
+  id: number;
+  name: string;
+  description: string;
+};
+
+type CollapsibleSkillsProps = {
+  skills: Skill[];
+};
+
+const CollapsibleSkills = ({ skills }: CollapsibleSkillsProps) => {
   const [openSkillId, setOpenSkillId] = useState<number | null>(null);
 
   const toggleSkill = (id: number) => {
@@ -16,7 +26,7 @@ const CollapsibleSkills = ({ skills }) => {
             className={styles.skillHeader}
             onClick={() => toggleSkill(skill.id)}
           >
-            <span>{skill.name}</span>
+            <span className={styles.label}>{skill.name}</span>
             <span className={styles.icon}>
               {openSkillId === skill.id ? "▲" : "▼"}
             </span>

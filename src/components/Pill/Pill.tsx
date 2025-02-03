@@ -1,8 +1,14 @@
 import styles from './Pill.module.css';
-const Pill = ({ id, data }) => {
-  return (
-    <span key={`${id + data}`} className={styles.pill}>{data}</span>
-  );
+
+interface PillProps {
+  id: string | number;
+  data: string;
 }
+
+const Pill = ({ id, data }: PillProps) => (
+  <span key={`${id}${data}`} className={styles.pill}>
+    {data}
+  </span>
+);
 
 export default Pill;

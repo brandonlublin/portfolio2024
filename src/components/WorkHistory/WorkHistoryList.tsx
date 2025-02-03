@@ -1,6 +1,17 @@
 import WorkHistoryCard from './WorkHistoryCard';
 import styles from './WorkHistory.module.css';
-const WorkHistoryList = ({ workHistory }) => {
+
+type Job = {
+  title: string;
+  company: string;
+  description: string;
+};
+
+type WorkHistoryListProps = {
+  workHistory: Job[];
+};
+
+const WorkHistoryList = ({ workHistory }: WorkHistoryListProps) => {
   return (
     <div className={styles.workHistoryList}>
       <h3 className={styles.cardHeader}>Work History</h3>
@@ -9,6 +20,6 @@ const WorkHistoryList = ({ workHistory }) => {
       ))}
     </div>
   );
-}
+};
 
 export default WorkHistoryList;

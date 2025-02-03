@@ -4,12 +4,12 @@ import Logo from "../Logo/Logo";
 
 const Header = () => {
   return (
-    <div className={styles.header}>
-      <div className={styles.headerContainer}>          
+    <header className={styles.header} aria-label="Main navigation">
+      <div className={styles.headerContainer}>
         <Logo />
-        <LinkButton />
+        <LinkButton text="Contact Me" href="/contact" />
       </div>
-    </div>
+    </header>
   );
 };
 
