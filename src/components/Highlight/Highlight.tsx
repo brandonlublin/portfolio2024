@@ -1,25 +1,35 @@
-import React, { useEffect, useState } from 'react';
-import './Highlight.css';  // Import the CSS file
+import { useEffect, useState } from "react";
+import "./Highlight.css";
 
-const Highlight = () => {
+const Highlight = ({ size = 600 }: { size?: number }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
-    const handleMouseMove = (event) => {
-      setPosition({ x: event.clientX, y: event.clientY });
+    let animationFrameId: number;
+
+    const handleMouseMove = (event: MouseEvent) => {
+      animationFrameId = requestAnimationFrame(() => {
+        setPosition({ x: event.clientX, y: event.clientY });
+      });
     };
 
-    document.addEventListener('mousemove', handleMouseMove);
-    
+    document.addEventListener("mousemove", handleMouseMove, { passive: true });
+
     return () => {
-      document.removeEventListener('mousemove', handleMouseMove);
+      document.removeEventListener("mousemove", handleMouseMove);
+      cancelAnimationFrame(animationFrameId);
     };
   }, []);
 
   return (
     <div
-      className='highlight'
-      style={{ left: position.x, top: position.y }}
+      className="highlight"
+      style={{
+        left: position.x,
+        top: position.y,
+        width: size,
+        height: size,
+      }}
     />
   );
 };

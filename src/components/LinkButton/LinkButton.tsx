@@ -1,36 +1,19 @@
-import { links } from '../../data/data'
+import { profiles } from '../../data/data';
 import styles from './LinkButton.module.css';
-import githubIcon from '../../assets/icons/github.png';
-import linkedinIcon from '../../assets/icons/linkedin.png';
-import resumeIcon from '../../assets/icons/resume.png';
-const LinkButton = () => {
-  const profiles = [
-    {
-      url: 'https://www.linkedin.com/in/brandon-lublin-78a550a8/',
-      icon: linkedinIcon,
-      alt: 'linkedin icon'
-    },
-    {
-      url: 'https://github.com/brandonlublin',
-      icon: githubIcon,
-      alt: 'github icon'
-    },
-    {
-      url: '#',
-      icon: resumeIcon,
-      alt: 'resume icon'
-    }
-  ];
 
-  return (
-    <div className={styles.linkContainer}>
-      {profiles.map((profile, index) => (
-        <a key={index} className={styles.profileLink} target="#" href={profile.url}>
-          <img className={styles.icon} src={profile.icon} />
-        </a>
-      ))}
-    </div>
-  );
+interface Profile {
+  url: string;
+  icon: string;
 }
+
+const LinkButton = () => (
+  <div className={styles.linkContainer}>
+    {profiles.map((profile: Profile, index: number) => (
+      <a key={index} className={styles.profileLink} target="_blank" href={profile.url} rel="noopener noreferrer">
+        <img className={styles.icon} src={profile.icon} alt={`${profile.url} icon`} />
+      </a>
+    ))}
+  </div>
+);
 
 export default LinkButton;
