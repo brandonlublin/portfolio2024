@@ -7,7 +7,7 @@ type TitleProps = {
 const Title = ({ titleText }: TitleProps) => {
   return (
     <div className={styles.headerSection}>
-      <div>{titleText}</div>
+      {titleText}
     </div>
   );
 };

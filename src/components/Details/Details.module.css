@@ -1,12 +1,11 @@
+
 .detailsContainer {
-  position: relative;
+  position: relative; 
 }
 
 .scrollToTopButton {
-  font-family: 'Geist Mono', monospace;
   cursor: pointer;
-  margin: 36px;
-  margin-bottom: 50px;
+  margin: 36px 42px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -29,8 +28,7 @@
   margin-bottom: 12px;
 }
 
-@media (max-width: 768px) {
-  .detailsContainer {
-    border-right: 1px solid #5C7A6E;
-  }
+.backToTop {
+  font-size: 16px;
+  font-family: 'DIN Condensed Alternate', sans-serif;
 }

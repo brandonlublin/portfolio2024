@@ -2,6 +2,10 @@
   height: 86px;
   background-color: #5C7A6E;
   width: 100%;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 .headerContainer {
@@ -11,4 +15,10 @@
   align-items: center;
   margin: auto;
   height: inherit;
+}
+
+@media screen and (max-width: 1700) {
+  .header {
+    height: 40px;
+  }
 }

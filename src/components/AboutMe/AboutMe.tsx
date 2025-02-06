@@ -1,18 +1,37 @@
+import { useState, useEffect, useRef } from 'react';
 import styles from './AboutMe.module.css';
 import Pill from '../Pill/Pill';
 import LinkButton from '../LinkButton/LinkButton';
 import LanguageIcon from '../LanguageIcon/LanguageIcon';
 import { quirks, languageIcons } from '../../data/data';
 
-type Language = {
-  id: number;
-  name: string;
-  icon: string;
-};
-
 const AboutMe = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
+  console.log('isScrolled', isScrolled);
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      if (containerRef.current) {
+        setIsScrolled(containerRef.current.scrollTop > 50);
+      }
+    };
+
+    const scrollContainer = containerRef.current;
+    if (scrollContainer) {
+      scrollContainer.addEventListener('scroll', handleScroll);
+    }
+
+    return () => {
+      if (scrollContainer) {
+        scrollContainer.removeEventListener('scroll', handleScroll);
+      }
+    };
+    console.log("containerRef.current:", containerRef.current);
+  }, []);
+
   return (
-    <div className={styles.aboutMeContainer}>
+    <div ref={containerRef} className={`${styles.aboutMeContainer} ${isScrolled ? styles.shrunk : ''}`}>
       <div className={styles.name}>Brandon Lublin</div>
       <div className={styles.title}>Senior Frontend Engineer</div>
       <div className={styles.quirksContainer}>
@@ -30,3 +49,4 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
+

@@ -37,6 +37,20 @@
   width: 515px;
   font-size: 14px;
 }
+.aboutMeContainer {
+  transition: height 0.3s ease, padding 0.3s ease;
+  height: auto;
+  padding: 20px;
+}
+
+.shrunk {
+  height: 100px;
+  overflow: hidden;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
 @media (max-width: 1700px) {
   .name {
@@ -44,6 +58,9 @@
     line-height: 60px;
     height: 30px;
     padding-top: 15px;
+  }
+  .aboutMeContainer {
+    padding: 0;
   }
   .title {
     font-size: 20px;
@@ -54,10 +71,10 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 800px) {
   .name {
     font-size: 40px;
-    margin-top: 16px;
+    padding: 2px;
   }
   .title {
     font-size: 16px;
