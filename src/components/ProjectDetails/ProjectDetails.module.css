@@ -10,6 +10,7 @@
   background-color: #3D4E47;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: 1px solid #5C7A6E;
+  height: 100vh;
 }
 
 .projectHeader {
@@ -29,7 +30,7 @@
   font-weight: bold;
   text-transform: uppercase;
   font-family: 'DIN Condensed Alternate', sans-serif;
-  border-left: 6px solid #B86E5C;
+  border-left: 8px solid #B86E5C;
   padding-left: 6px;
   line-height: 26px;
 }
@@ -96,7 +97,7 @@
   background: none;
   border: none;
   font-size: 1.5rem;
-  color: #5C7A6E;
+  color: #B86E5C;
   display: flex;
   align-items: center;
   cursor: pointer;
