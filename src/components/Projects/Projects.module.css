@@ -59,9 +59,12 @@
 .projectTitle {
   font-family: 'DIN Condensed Alternate', sans-serif;
   text-transform: uppercase;
-  font-size: 24px;
+  font-size: 26px;
   font-weight: bold;
   text-transform: uppercase;
+  line-height: 20px;
+  border-left: 8px solid #B86E5C;
+  padding-left: 6px;
 }
 
 .projectTopRow {
@@ -134,10 +137,6 @@
 
   .projectHeader {
     font-size: 16px;
-  }
-
-  .arrow {
-    margin-right: 60px;
   }
 }
 

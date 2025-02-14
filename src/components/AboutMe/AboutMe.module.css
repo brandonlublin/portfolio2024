@@ -57,8 +57,9 @@
   .name {
     font-size: 60px;
     line-height: 60px;
-    height: 30px;
-    padding-top: 15px;
+    height: 32px;
+    padding-left: 6px;
+    padding-top: 14px;
   }
   .aboutMeContainer {
     padding: 0;
@@ -76,10 +77,12 @@
 @media (max-width: 800px) {
   .name {
     font-size: 40px;
-    padding: 2px;
+    padding-left: 6px;
+    padding-top: 2px;
   }
   .title {
     font-size: 16px;
+    margin-top: 25px;
   }
   .quirksContainer {
     font-size: 12px;
@@ -88,7 +91,7 @@
     line-height: 24px;
   }
   .languagesContainer {
-    font-size: 12px;
+    display: none;
   }
 }
 

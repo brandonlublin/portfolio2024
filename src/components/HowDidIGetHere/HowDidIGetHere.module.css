@@ -36,12 +36,18 @@
 
   .selfieContainer {
     width: 100%;
-    padding: 24px 0;
+    padding: 0;
     border-bottom: 1px solid #5C7A6E;
+    height: 325px;
   }
 
   .selfie {
     width: 250px;
+    padding: 40px 0 40px 0;
+    border-left: 1px solid #5C7A6E;
+    border-right: 1px solid #5C7A6E;
+    border-bottom: none;
+    border-top: none;
   }
 
   .selfBlurb {
