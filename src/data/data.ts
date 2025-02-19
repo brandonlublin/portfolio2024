@@ -65,7 +65,7 @@ export const projects = [
     ],
     img: "https://via.placeholder.com/151",
     imgAlt: "weatherSpot icon",
-    languages: ["React", "TypeScript", "Node", "Express"],
+    languages: ["React", "TypeScript", "Node"],
   },
 ];
 
@@ -154,5 +154,23 @@ export const skills = [
     id: 3,
     name: "The Pursuit of Mastery",
     description: "My stubborn work ethic pushes me to continuously improve, whether I’m refining my golf swing, building a better UI, or ensuring a project’s success. I believe success is earned through persistence and dedication."
+  }
+]
+
+export const peerFeedback = [
+  {
+    id: 1,
+    name: "Justin L",
+    feedback: "Brandon joined our product/engineering team as a temporary assist to help us with a real capacity crunch. As an Accelerator he is still fairly new in his career, but his level of dedication and professionalism didn't let that impact his work. He ended up staying on our team through multiple release cycles and was a huge help in getting some really complicated front end work done. It has been great to watch him grow in confidence technically - but also in his ability to reach out, ask questions of product and make sure that his work is successful. Those skills will serve him well on his software career path, and I wish him the best!"
+  },
+  {
+    id: 2,
+    name: "Matt I",
+    feedback: "Brandon and I worked on the Identity and Access Management crew at Highspot. Our collaboration fantastic – his positive attitude, can-do spirit, and willingness to work through problems together made every interaction a joy. \nI particularly appreciated how his features were consistently well executed and built right the first time, minimizing bugs or rework. \nBrandon's humility and eagerness to learn set a positive example for the team. Working with him was not only productive but also enjoyable. His dedication and skill make him a valuable teammate in any project."
+  },
+  {
+    id: 3,
+    name: "Kate D",
+    feedback: "I have worked with Brandon for almost 4 years in the Accelerate program and Solution Management. He is a dedicated team player first and foremost and an empathetic leader. We worked on complex features with ambiguous requirements that required discussion and technical expertise that needed foresight and thoughtfulness. Because Brandon possesses these qualities, we were able to successfully deliver security features dealing with sign in. He is also responsible for a major feature that is used today which is called HighBot. This bot was part of a project done off work hours that is now used to make sure our pull requests are complete and robust with unit tests. \nIn addition to being technically sound, Brandon is genuinely a pleasant human being to work with and a great friend to all of us on his team. He is always up for conversation and an empathetic ear while willing to drop everything to help a teammate. I consider myself very lucky having the chance to work with Brandon in our career journey as software engineers. Any team and company would be all the better with him there."
   }
 ]

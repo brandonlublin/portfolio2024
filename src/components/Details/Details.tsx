@@ -9,12 +9,13 @@ import arrowIcon from '../../assets/icons/arrow.png';
 import HowDidIGetHere from '../HowDidIGetHere/HowDidIGetHere';
 import CollapsibleSkills from '../CollapsibleSkills/CollapsibleSkills';
 import ProjectDetails from '../ProjectDetails/ProjectDetails';
+import PeerFeedback from '../PeerFeedback/PeerFeedback';
 
 const Details = ({ selectedProject, openProjectDetails }) => {
   const [showScrollButton, setShowScrollButton] = useState(false);
 
   const handleScroll = () => {
-    const position = document.querySelector('.appContainer').scrollTop;
+    const position = document.querySelector('.details').scrollTop;
     setShowScrollButton(position > 50);
   };
 
@@ -26,10 +27,10 @@ const Details = ({ selectedProject, openProjectDetails }) => {
   };
 
   useEffect(() => {
-    const containerElement = document.querySelector('.appContainer');
-    containerElement.addEventListener('scroll', handleScroll);``
+    const detailsElement = document.querySelector('.details');
+    detailsElement.addEventListener('scroll', handleScroll);
 
-    return () => containerElement.removeEventListener('scroll', handleScroll);
+    return () => detailsElement.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -40,10 +41,11 @@ const Details = ({ selectedProject, openProjectDetails }) => {
       <Title titleText={'What makes me tick'} />
       <CollapsibleSkills skills={skills} />
       <Title titleText={'What my peers are saying'} />
+      <PeerFeedback />
       {showScrollButton && (
         <a onClick={scrollToTop} className={styles.scrollToTopButton}>
           <img className={styles.arrow} src={arrowIcon} />
-          <div className={styles.backToTop}>Back to Top</div>
+          <div className={styles.backTo}>Back to Top</div>
         </a>
       )}
     </div>
