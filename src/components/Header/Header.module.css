@@ -17,8 +17,8 @@
   height: inherit;
 }
 
-@media screen and (max-width: 1700) {
+@media screen and (max-width: 800px) {
   .header {
-    height: 40px;
+    position: fixed;
   }
 }

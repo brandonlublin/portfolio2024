@@ -35,6 +35,7 @@ body, html {
   box-sizing: border-box;
   flex-shrink: 0;
   overflow: hidden;
+  overflow-y: auto;
 }
 
 .details {
@@ -65,7 +66,7 @@ body, html {
 
 @media (max-width: 1700px) {
   body {
-    overflow: hidden;
+    overflow: auto;
   }
   .app {
     border-right: none;
@@ -74,11 +75,10 @@ body, html {
     flex-direction: column;
     align-items: center; 
     width: 100%;
-    overflow: hidden;
     max-width: 754px;
     margin: 0 auto;
     padding: 0 20px;
-    height: 100vh;
+    height: fit-content;
   }
   .aboutMe {
     display: flex;
@@ -87,18 +87,13 @@ body, html {
     width: 100%; 
     max-width: 754px;
     margin-right: 0;
-    min-height: 350px;
-    flex: 0;
     padding: 36px;
-    box-sizing: border-box;
     border-right: 1px solid #5C7A6E;
     border-left: 1px solid #5C7A6E;
   }
   .details {
-    display: flex;
     flex-direction: column;
     width: 100%;
-    flex: 1;
     box-sizing: border-box;
     border-top: 1px solid #5C7A6E;
   }
@@ -109,11 +104,12 @@ body, html {
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    height: 100vh;
     border: none;
     padding: 0;
+    margin-top: 80px;
   }
   .aboutMe {
     min-height: 225px;
+    padding: 40px 24px 24px 24px;
   }
 }
