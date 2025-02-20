@@ -81,7 +81,7 @@ export const profiles = [
     alt: 'github icon'
   },
   {
-    url: '#',
+    url: 'https://docs.google.com/document/d/1aN8CQ0Bq2DaJla_W29cGK7GUTvjswCrw_rp0mQ0vMaQ/edit?tab=t.0',
     icon: resumeIcon,
     alt: 'resume icon'
   }
