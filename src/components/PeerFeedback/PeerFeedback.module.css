@@ -1,3 +1,31 @@
+.peerFeedbackContainer {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .feedback {
-  font-family: 'DIN Condensed', sans-serif;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feedbackText {
+  font-size: 16px;
+  font-family: 'DIN Condensed Alternate', sans-serif;
+  color: #e0e0e0;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.feedbackUser {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  font-family: 'DIN Condensed Alternate', sans-serif;
+  color: #86c5da;
+  margin-top: 12px;
+  text-transform: uppercase;
 }

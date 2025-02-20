@@ -1,21 +1,17 @@
 import { peerFeedback as peerFeedbackData } from "../../data/data";
-import styles from './PeerFeedback.module.css';
+import styles from "./PeerFeedback.module.css";
 
 const PeerFeedback = () => {
   return (
     <div className={styles.peerFeedbackContainer}>
-      {peerFeedbackData.map((peerFeedback) => (
-        console.log('peerFeedback', peerFeedback),
-        <div className={styles.feedback}>
-          <div className={styles.feedbackHeader}>
-            <div>{peerFeedback.name}</div>
-            <div>{peerFeedback.date}</div>
-          </div>
-          <div>{peerFeedback.feedback}</div>
+      {peerFeedbackData.map((peerFeedback, index) => (
+        <div key={index} className={styles.feedback}>
+          <p className={styles.feedbackText}>{peerFeedback.feedback}</p>
+          <span className={styles.feedbackUser}>— {peerFeedback.name}</span>
         </div>
       ))}
     </div>
   );
-}
+};
 
-export default PeerFeedback
+export default PeerFeedback;
