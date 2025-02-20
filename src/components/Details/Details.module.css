@@ -11,6 +11,7 @@
   align-items: center;
   height: 48px;
   flex-direction: column;
+  padding-bottom: 90px;
 }
 
 .scrollToTopButton img {

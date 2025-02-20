@@ -24,6 +24,8 @@
   .logoContainer {
     width: 26px;
     height: 26px;
+    display: flex;
+    height: fit-content;
   }
 }
 
