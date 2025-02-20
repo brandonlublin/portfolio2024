@@ -78,7 +78,7 @@
   .name {
     font-size: 34px;
     padding-left: 6px;
-    line-height: 26px;
+    line-height: 0.7;
     max-height: 14px;
   }
   .title {
@@ -90,8 +90,6 @@
     margin-bottom: 20px;
     width: auto;
     line-height: 24px;
-  }
-  .languagesContainer {
   }
 }
 
