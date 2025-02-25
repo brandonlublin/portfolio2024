@@ -10,7 +10,6 @@
   background-color: #3D4E47;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: 1px solid #5C7A6E;
-  height: 100vh;
 }
 
 .projectHeader {
@@ -59,11 +58,11 @@
   gap: 20px;
   flex-wrap: wrap;
   margin-top: 20px;
+  justify-content: center;
 }
 
 .screenshot {
   width: 100%;
-  max-width: 300px;
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -73,7 +72,6 @@
   text-align: center;
   font-size: 0.9rem;
   margin-top: 10px;
-  color: #666;
   font-family: 'Geist Mono', monospace;
 }
 

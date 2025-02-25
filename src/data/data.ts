@@ -5,6 +5,10 @@ import rubyIcon from '../assets/icons/ruby.png';
 import githubIcon from '../assets/icons/github.png';
 import linkedinIcon from '../assets/icons/linkedin.png';
 import resumeIcon from '../assets/icons/resume.png';
+import recipeDetails from '../assets/images/recipe-details-recipe-finder.png';
+import homepageRecipeFinder from '../assets/images/homepage-recipe-finder.png';
+import paginationRecipeFinder from '../assets/images/pagination-recipe-finder.png';
+import filterCuisineRecipeFinder from '../assets/images/filter-cuisine-type-recipe-finder.png';
 
 export const projects = [
   {
@@ -15,13 +19,23 @@ export const projects = [
     screenshots: [
       {
         id: 1,
-        imgUrl: "https://via.placeholder.com/151",
+        imgUrl: homepageRecipeFinder,
         label: "Recipe search interface with filter options",
       },
       {
         id: 2,
-        imgUrl: "https://via.placeholder.com/151",
+        imgUrl: recipeDetails,
         label: "Detailed recipe view showing nutritional information and preparation steps",
+      },
+      {
+        id: 3,
+        imgUrl: paginationRecipeFinder,
+        label: "Dynamic Pagination that allows users to clickt to a specific page, while showing total amount of pages if more than 1.",
+      },
+      {
+        id: 4,
+        imgUrl: filterCuisineRecipeFinder,
+        label: "Filter results by cuisine type, dietary restricitions, etc.",
       }
     ],
     research: [
@@ -37,36 +51,36 @@ export const projects = [
     imgAlt: "recipe icon",
     languages: ["React", "TypeScript"],
   },
-  {
-    id: 2,
-    title: "WeatherSpot",
-    description: "This is project 1",
-    longDescription: "WeatherSpot is a weather forecasting app that allows users to view current weather conditions and forecasts based on their location or a specific city.",
-    capabilities: [
-      "Real-time weather data from a reliable weather API (e.g., OpenWeatherMap).",
-      "Users can search for weather in different cities worldwide.",
-      "Displays hourly and 7-day weather forecasts.",
-    ],
-    research: [
-      "Researched and implemented OpenWeatherMap API for accurate weather data.",
-      "Designed a clean, user-friendly interface using React.",
-    ],
-    screenshots: [
-      {
-        id: 1,
-        imgUrl: "https://via.placeholder.com/151",
-        label: "Main weather display page with current conditions and forecast.",
-      },
-      {
-        id: 2,
-        imgUrl: "https://via.placeholder.com/151",
-        label: "City search functionality showing location-based weather data.",
-      }
-    ],
-    img: "https://via.placeholder.com/151",
-    imgAlt: "weatherSpot icon",
-    languages: ["React", "TypeScript", "Node"],
-  },
+  // {
+  //   id: 2,
+  //   title: "WeatherSpot",
+  //   description: "This is project 1",
+  //   longDescription: "WeatherSpot is a weather forecasting app that allows users to view current weather conditions and forecasts based on their location or a specific city.",
+  //   capabilities: [
+  //     "Real-time weather data from a reliable weather API (e.g., OpenWeatherMap).",
+  //     "Users can search for weather in different cities worldwide.",
+  //     "Displays hourly and 7-day weather forecasts.",
+  //   ],
+  //   research: [
+  //     "Researched and implemented OpenWeatherMap API for accurate weather data.",
+  //     "Designed a clean, user-friendly interface using React.",
+  //   ],
+  //   screenshots: [
+  //     {
+  //       id: 1,
+  //       imgUrl: "https://via.placeholder.com/151",
+  //       label: "Main weather display page with current conditions and forecast.",
+  //     },
+  //     {
+  //       id: 2,
+  //       imgUrl: "https://via.placeholder.com/151",
+  //       label: "City search functionality showing location-based weather data.",
+  //     }
+  //   ],
+  //   img: "https://via.placeholder.com/151",
+  //   imgAlt: "weatherSpot icon",
+  //   languages: ["React", "TypeScript", "Node"],
+  // },
 ];
 
 export const profiles = [
