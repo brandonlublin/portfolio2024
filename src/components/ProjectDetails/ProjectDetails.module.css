@@ -10,6 +10,7 @@
   background-color: #3D4E47;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border: 1px solid #5C7A6E;
+  overflow: scroll;
 }
 
 .projectHeader {
@@ -36,6 +37,12 @@
 
 .projectDescription {
   font-size: 1.1rem;
+  margin-bottom: 20px;
+  font-family: 'Geist Mono', monospace;
+}
+
+.todos {
+  margin-top: 20px;
   margin-bottom: 20px;
   font-family: 'Geist Mono', monospace;
 }

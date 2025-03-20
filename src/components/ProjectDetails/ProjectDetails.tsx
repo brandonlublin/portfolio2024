@@ -6,6 +6,7 @@ interface ProjectProps {
     imgAlt: string;
     title: string;
     description: string;
+    todos: string[];
     research: string[];
     capabilities: string[];
     screenshots: { imgUrl: string; label: string }[];
@@ -40,6 +41,16 @@ const ProjectDetails = ({ project, onBack }: ProjectProps) => (
         </div>
       ))}
     </div>
+    {project?.todos?.length > 0 && (
+      <div className={styles.todos}>
+        <div className={styles.sectionLabel}>To-Dos</div>
+        <ul>
+          {project.todos.map((todo, index) => (
+            <li key={index}>{todo}</li>
+          ))}
+        </ul>
+      </div>
+    )}
     <div className={styles.projectScreenshots}>
       {project.screenshots.map((screenshot, index) => (
         <div key={index}>
