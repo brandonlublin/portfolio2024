@@ -9,13 +9,20 @@ import recipeDetails from '../assets/images/recipe-details-recipe-finder.png';
 import homepageRecipeFinder from '../assets/images/homepage-recipe-finder.png';
 import paginationRecipeFinder from '../assets/images/pagination-recipe-finder.png';
 import filterCuisineRecipeFinder from '../assets/images/filter-cuisine-type-recipe-finder.png';
+import addJob from '../assets/images/add-job.png';
+import jobPostings from '../assets/images/job-postings.png';
+import filterJobs from '../assets/images/filter-jobs.png';
+import applyVia from '../assets/images/apply-via.png';
+import jobHomepage from '../assets/images/homepage.png';
+import appliedJob from '../assets/images/applied-job.png';
+import expandedJob from '../assets/images/expanded-job.png';
 
 export const projects = [
   {
     id: 1,
     title: "Recipe Finder",
     description: "Just a simple recipe finder, that allows the user to search for recipes, filter recipes by ingredients, cuisine, dietary restrictions, and more.",
-    githubLink: "https://github.com/username/recipe-finder",
+    githubLink: "https://github.com/brandonlublin/recipe-finder",
     screenshots: [
       {
         id: 1,
@@ -50,6 +57,65 @@ export const projects = [
     img: recipeIcon,
     imgAlt: "recipe icon",
     languages: ["React", "TypeScript"],
+  },
+  {
+    id: 2,
+    title: "Job Applicator",
+    description: "I was tired of using multiple sites to apply to jobs, so I created a tool that aggregates multiple job boards and cultivates the data in a specific way so I can be more selective about what jobs I'm applying for.",
+    githubLink: "https://github.com/brandonlublin/jobapplicator",
+    todos: ["I really want to add more analytics around my job applications", "I plan on getting this hosted, but it's getting demoted to house projects lately."],
+    screenshots: [
+      {
+        id: 1,
+        imgUrl: jobHomepage,
+        label: "Homepage showing all job postings",
+      },
+      {
+        id: 2,
+        imgUrl: addJob,
+        label: "Manually add a job to your applied jobs list",
+      },
+      {
+        id: 3,
+        imgUrl: jobPostings,
+        label: "View all job postings",
+      },
+      {
+        id: 4,
+        imgUrl: filterJobs,
+        label: "Filter job postings by salary and is remote",
+      },
+      {
+        id: 5,
+        imgUrl: applyVia,
+        label: "Apply to a job via the job posting",
+      },
+      {
+        id: 6,
+        imgUrl: appliedJob,
+        label: "View all jobs you've applied to",
+      },
+      {
+        id: 7,
+        imgUrl: expandedJob,
+        label: "Expanded job posting",
+      }
+    ],
+    research: [
+      "Explored job board APIs like Indeed, LinkedIn, and remote-specific boards to aggregate job postings.",
+      "Implemented dynamic filtering to refine job searches based on salary, job type, and remote status.",
+      "Researched best practices for handling large datasets efficiently in a React-based UI.",
+    ],
+    capabilities: [
+      "Aggregates job listings from multiple sources into a single, easy-to-browse interface.",
+      "Allows users to manually add job postings and track application status.",
+      "Supports filtering by salary range, job type (remote, full-time, contract), and other criteria.",
+      "Enables quick access to job application links directly from the dashboard.",
+      "Stores applied jobs separately to help track past applications and avoid duplicates.",
+    ],
+    img: "",
+    imgAlt: "Job Applicator icon",
+    languages: ["React", "TypeScript", "Node", "Express"],
   },
   // {
   //   id: 2,
