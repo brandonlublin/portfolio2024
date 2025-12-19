@@ -76,7 +76,8 @@
   }
   .nameBorder {
     width: 6px;
-    margin: 12px 8px 8px 0px;
+    margin: 0px 8px 0px 0px;
+    height: 55px;
   }
   .nameWrapper {
     padding-top: 0;
@@ -133,15 +134,20 @@
   }
 }
 
-@media (max-width: 650px) {
+@media (max-width: 700px) {
   .firstName,
   .lastName {
     font-size: 48px;
-    line-height: 48px;
+    line-height: 44px;
+  }
+
+  .nameBorder {
+    margin: 6px 8px 0px 0px;
+    height: 40px;
   }
 }
 
-@media (max-width: 430px) {
+@media (max-width: 500px) {
   .aboutMeContainer {
     margin: 0;
   }
