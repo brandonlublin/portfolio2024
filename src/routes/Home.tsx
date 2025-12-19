@@ -32,7 +32,7 @@ const Home = () => {
       if (project) {
         setSelectedProject(project);
       } else {
-        navigate('/');
+        navigate('/404', { replace: true });
       }
     } else {
       setSelectedProject(null);
