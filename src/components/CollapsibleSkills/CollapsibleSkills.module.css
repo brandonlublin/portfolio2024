@@ -65,3 +65,26 @@
     line-height: 30px;
   }
 }
+
+@media (max-width: 500px) {
+  .skill {
+    padding: 16px;
+  }
+  .skillHeader {
+    padding: 8px;
+    font-size: 20px;
+  }
+  .skillContent {
+    padding: 0 12px;
+  }
+  .skillContent.open {
+    max-height: none;
+    padding: 16px 12px;
+    overflow: visible;
+  }
+  .skillContent p,
+  .skillContent div {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
