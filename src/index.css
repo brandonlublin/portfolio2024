@@ -1,10 +1,33 @@
 /* Global Styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body, html {
   margin: 0;
   background-color: #252E2B;
   color: white;
   height: 100%;
   overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Better focus states for accessibility */
+*:focus-visible {
+  outline: 2px solid #B86E5C;
+  outline-offset: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 2px solid #B86E5C;
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 .app {
@@ -29,10 +52,9 @@ body, html {
 .aboutMe {
   display: flex;
   justify-content: center;
-  width: 469px; 
-  padding: 50px;
+  width: 600px; 
+  padding: 20px;
   margin-right: 71px;
-  box-sizing: border-box;
   flex-shrink: 0;
   overflow: hidden;
   overflow-y: auto;
@@ -111,5 +133,9 @@ body, html {
   .aboutMe {
     min-height: 225px;
     padding: 40px 24px 24px 24px;
+  }
+
+  .details {
+    width: 95%
   }
 }

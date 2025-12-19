@@ -1,11 +1,6 @@
 import WorkHistoryCard from './WorkHistoryCard';
 import styles from './WorkHistory.module.css';
-
-type Job = {
-  title: string;
-  company: string;
-  description: string;
-};
+import { Job } from '../../types';
 
 type WorkHistoryListProps = {
   workHistory: Job[];
@@ -16,7 +11,7 @@ const WorkHistoryList = ({ workHistory }: WorkHistoryListProps) => {
     <div className={styles.workHistoryList}>
       <h3 className={styles.cardHeader}>Work History</h3>
       {workHistory.map((job) => (
-        <WorkHistoryCard key={job.company} job={job} />
+        <WorkHistoryCard key={job.id} job={job} />
       ))}
     </div>
   );

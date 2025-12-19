@@ -1,16 +1,22 @@
+import { motion } from 'framer-motion';
 import LinkButton from "../LinkButton/LinkButton";
 import styles from "./Header.module.css";
 import Logo from "../Logo/Logo";
-import ActionMenu from "../ActionMenu/ActionMenu"; 
+import { fadeInDown, defaultTransition } from '../../utils/animations';
 
 const Header = () => {
   return (
-    <header className={styles.header} aria-label="Main navigation">
+    <motion.header
+      className={styles.header}
+      aria-label="Main navigation"
+      {...fadeInDown}
+      transition={defaultTransition}
+    >
       <div className={styles.headerContainer}>
-        <ActionMenu />
+        <Logo />
         <LinkButton text="Contact Me" href="/contact" />
       </div>
-    </header>
+    </motion.header>
   );
 };
 

@@ -3,7 +3,7 @@
   width: 100%;
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 50px 60px 50px;
   box-sizing: border-box;
   overflow: hidden;
   color: white;
@@ -39,6 +39,7 @@
   font-size: 1.1rem;
   margin-bottom: 20px;
   font-family: 'Geist Mono', monospace;
+  line-height: 1.7;
 }
 
 .todos {
@@ -47,10 +48,36 @@
   font-family: 'Geist Mono', monospace;
 }
 
+.todos ul {
+  line-height: 1.7;
+  padding-left: 20px;
+}
+
+.todos li {
+  margin-bottom: 8px;
+}
+
+.todos li:last-child {
+  margin-bottom: 0;
+}
+
 .projectResearch {
   margin-top: 40px;
   margin-bottom: 40px;
   font-family: 'Geist Mono', monospace;
+}
+
+.projectResearch ul {
+  line-height: 1.7;
+  padding-left: 20px;
+}
+
+.projectResearch li {
+  margin-bottom: 8px;
+}
+
+.projectResearch li:last-child {
+  margin-bottom: 0;
 }
 
 .sectionLabel {
@@ -73,12 +100,14 @@
   height: auto;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 12px;
 }
 
 .screenshotLabel {
   text-align: center;
   font-size: 0.9rem;
-  margin-top: 10px;
+  margin-top: 0;
+  margin-bottom: 26px;
   font-family: 'Geist Mono', monospace;
 }
 
@@ -90,33 +119,58 @@
 .gitHubLink a {
   font-size: 1.1rem;
   font-weight: bold;
-  color: #5C7A6E;
+  color: #B86E5C;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 .gitHubLink a:hover {
+  color: #d88a7a;
   text-decoration: underline;
 }
 
 .backButton {
   background: none;
   border: none;
-  font-size: 1.5rem;
-  color: #B86E5C;
   display: flex;
   align-items: center;
   cursor: pointer;
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: transform 0.3s ease;
+  padding: 12px 16px 12px 12px;
+  margin-bottom: 20px;
 }
 
 .backButton:hover {
   transform: translateX(-3px);
 }
 
-.icon {
-  font-size: 1.8rem;
+.backArrow {
+  position: relative;
   display: inline-block;
-  margin-right: 8px;
+  width: 50px;
+  height: 3px;
+  background-color: #B86E5C;
+  margin-right: 20px;
+  transition: transform 0.3s ease;
+}
+
+.backArrow:hover {
+  transform: translateX(-3px);
+}
+
+.backArrow::before {
+  content: '';
+  position: absolute;
+  transform: translate(50%, -50%);
+  left: -20px;
+  width: 0;
+  top: 2px;
+  height: 0;
+  margin-left: 10px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-right: 10px solid #B86E5C;
+  transition: border-right-color 0.3s ease;
 }
 
 .backButton:focus {

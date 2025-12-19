@@ -3,3 +3,13 @@
   flex-direction: column;
   padding: 20px;
 }
+
+.details p {
+  line-height: 1.7;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.details p:last-child {
+  margin-bottom: 0;
+}

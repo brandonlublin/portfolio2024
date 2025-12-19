@@ -21,38 +21,38 @@ export const projects = [
   {
     id: 1,
     title: "Recipe Finder",
-    description: "Just a simple recipe finder, that allows the user to search for recipes, filter recipes by ingredients, cuisine, dietary restrictions, and more.",
-    githubLink: "https://github.com/brandonlublin/recipe-finder",
+    description: "I built this because I was tired of scrolling through endless recipe sites trying to find something that actually worked with what I had in my fridge. It's a simple tool, but it does exactly what I needed – lets me search by what I've got, filter by what I'm in the mood for, and actually find recipes that make sense for my life.",
+    gitHubLink: "https://github.com/brandonlublin/recipe-finder",
     screenshots: [
       {
         id: 1,
         imgUrl: homepageRecipeFinder,
-        label: "Recipe search interface with filter options",
+        label: "The main search page where you can filter by ingredients, cuisine, and dietary needs",
       },
       {
         id: 2,
         imgUrl: recipeDetails,
-        label: "Detailed recipe view showing nutritional information and preparation steps",
+        label: "When you find a recipe you like, you get all the details – ingredients, steps, even the nutritional info",
       },
       {
         id: 3,
         imgUrl: paginationRecipeFinder,
-        label: "Dynamic Pagination that allows users to clickt to a specific page, while showing total amount of pages if more than 1.",
+        label: "I spent way too much time getting the pagination right. You can jump to any page, and it shows you how many pages there are total",
       },
       {
         id: 4,
         imgUrl: filterCuisineRecipeFinder,
-        label: "Filter results by cuisine type, dietary restricitions, etc.",
+        label: "The filters are what make this actually useful – cuisine type, dietary restrictions, all that stuff",
       }
     ],
     research: [
-      "Investigated the use of the Spoonacular API for recipe data.",
-      "Explored various React state management techniques (such as Context API and Redux) to manage search results and user preferences.",
+      "I spent a good chunk of time digging into the Spoonacular API. It's got everything, but figuring out how to structure the calls and handle the data took some trial and error.",
+      "This was one of my first real projects where I had to think about state management. I tried Context API first, then Redux, then back to Context. Learned a lot about when to use what, and honestly, sometimes the simpler solution is the right one.",
     ],
     capabilities: [
-      "Users can search for recipes by name or ingredients.",
-      "Filter recipes by cuisine (e.g., Italian, Indian, etc.) and dietary restrictions (e.g., vegetarian, vegan, gluten-free).",
-      "View detailed recipe instructions, ingredients, and nutritional information.",
+      "Search by recipe name or just throw in whatever ingredients you have lying around",
+      "Filter by cuisine type (Italian, Indian, whatever you're craving) and dietary stuff (vegetarian, vegan, gluten-free)",
+      "See the full recipe with instructions, ingredients list, and nutritional info",
     ],
     img: recipeIcon,
     imgAlt: "recipe icon",
@@ -61,92 +61,62 @@ export const projects = [
   {
     id: 2,
     title: "Job Applicator",
-    description: "I was tired of using multiple sites to apply to jobs, so I created a tool that aggregates multiple job boards and cultivates the data in a specific way so I can be more selective about what jobs I'm applying for.",
-    githubLink: "https://github.com/brandonlublin/jobapplicator",
-    todos: ["I really want to add more analytics around my job applications", "I plan on getting this hosted, but it's getting demoted to house projects lately."],
+    description: "Job hunting is exhausting. I was bouncing between LinkedIn, Indeed, and like five other sites, and I kept losing track of what I'd applied to where. So I built this to bring everything into one place. It's not fancy, but it lets me filter by what actually matters to me – salary, remote work, that kind of stuff – so I can be way more intentional about where I'm putting my energy.",
+    gitHubLink: "https://github.com/brandonlublin/jobapplicator",
+    todos: ["I really want to add more analytics around my job applications – like tracking response rates, time to hear back, that kind of thing", "I keep saying I'll get this hosted, but honestly it's been demoted to house projects lately. Maybe one day."],
     screenshots: [
       {
         id: 1,
         imgUrl: jobHomepage,
-        label: "Homepage showing all job postings",
+        label: "The main dashboard where all the jobs live. Clean and simple, which is what I needed",
       },
       {
         id: 2,
         imgUrl: addJob,
-        label: "Manually add a job to your applied jobs list",
+        label: "Sometimes you find a job somewhere else, so I made it easy to just add it manually",
       },
       {
         id: 3,
         imgUrl: jobPostings,
-        label: "View all job postings",
+        label: "All the jobs in one place. No more switching between tabs",
       },
       {
         id: 4,
         imgUrl: filterJobs,
-        label: "Filter job postings by salary and is remote",
+        label: "The filters are the whole point – salary range, remote only, stuff like that",
       },
       {
         id: 5,
         imgUrl: applyVia,
-        label: "Apply to a job via the job posting",
+        label: "Click through to apply right from here. Saves me a few seconds, which adds up",
       },
       {
         id: 6,
         imgUrl: appliedJob,
-        label: "View all jobs you've applied to",
+        label: "This is where I track what I've actually applied to. Helps me not double-apply or lose track",
       },
       {
         id: 7,
         imgUrl: expandedJob,
-        label: "Expanded job posting",
+        label: "When you click on a job, you get all the details. Sometimes I just need to see everything at once",
       }
     ],
     research: [
-      "Explored job board APIs like Indeed, LinkedIn, and remote-specific boards to aggregate job postings.",
-      "Implemented dynamic filtering to refine job searches based on salary, job type, and remote status.",
-      "Researched best practices for handling large datasets efficiently in a React-based UI.",
+      "I spent way too much time trying to figure out which job board APIs actually work. Indeed's API is a pain, LinkedIn's is even worse, and most of the remote-specific boards don't have public APIs. Ended up doing a lot of manual aggregation, which wasn't the plan but it works.",
+      "The filtering was trickier than I thought. When you're dealing with a bunch of different data sources, making sure the filters work consistently across all of them took some doing.",
+      "I learned a lot about handling bigger datasets in React. At first it was slow, but once I figured out how to properly paginate and only render what's visible, it got way better.",
     ],
     capabilities: [
-      "Aggregates job listings from multiple sources into a single, easy-to-browse interface.",
-      "Allows users to manually add job postings and track application status.",
-      "Supports filtering by salary range, job type (remote, full-time, contract), and other criteria.",
-      "Enables quick access to job application links directly from the dashboard.",
-      "Stores applied jobs separately to help track past applications and avoid duplicates.",
+      "Pulls jobs from multiple places and puts them all in one spot",
+      "You can add jobs manually if you find them somewhere else",
+      "Filter by salary, remote work, job type – the stuff that actually matters",
+      "Track what you've applied to so you don't lose track or double-apply",
+      "Quick links to apply directly from the dashboard",
     ],
     img: "",
     imgAlt: "Job Applicator icon",
     languages: ["React", "TypeScript", "Node", "Express"],
   },
-  // {
-  //   id: 2,
-  //   title: "WeatherSpot",
-  //   description: "This is project 1",
-  //   longDescription: "WeatherSpot is a weather forecasting app that allows users to view current weather conditions and forecasts based on their location or a specific city.",
-  //   capabilities: [
-  //     "Real-time weather data from a reliable weather API (e.g., OpenWeatherMap).",
-  //     "Users can search for weather in different cities worldwide.",
-  //     "Displays hourly and 7-day weather forecasts.",
-  //   ],
-  //   research: [
-  //     "Researched and implemented OpenWeatherMap API for accurate weather data.",
-  //     "Designed a clean, user-friendly interface using React.",
-  //   ],
-  //   screenshots: [
-  //     {
-  //       id: 1,
-  //       imgUrl: "https://via.placeholder.com/151",
-  //       label: "Main weather display page with current conditions and forecast.",
-  //     },
-  //     {
-  //       id: 2,
-  //       imgUrl: "https://via.placeholder.com/151",
-  //       label: "City search functionality showing location-based weather data.",
-  //     }
-  //   ],
-  //   img: "https://via.placeholder.com/151",
-  //   imgAlt: "weatherSpot icon",
-  //   languages: ["React", "TypeScript", "Node"],
-  // },
 ];
 
 export const profiles = [
@@ -177,7 +147,7 @@ export const workHistory = [
     description: "I work on the Highspot engineering team.",
   },
   {
-    id: 1,
+    id: 2,
     title: "EDI Systems Analyst",
     company: "Expeditors International",
     location: "Seattle, WA",
@@ -206,18 +176,6 @@ export const languageIcons = [
 
 export const quirks = ['4 Years of Experience', 'Interpersonal Communication Expert', 'B2B SaaS']
 
-export const links = [
-  { 
-    id: 1,
-    text: 'GitHub',
-    url: ''
-  },
-  { 
-    id: 2,
-    text: 'LinkedIn',
-    url: ''
-  }
-]
 
 export const skills = [
   {
@@ -240,17 +198,22 @@ export const skills = [
 export const peerFeedback = [
   {
     id: 1,
-    name: "Matt I",
+    name: "Matt I.",
     feedback: "Brandon and I worked on the Identity and Access Management crew at Highspot. Our collaboration fantastic – his positive attitude, can-do spirit, and willingness to work through problems together made every interaction a joy. \nI particularly appreciated how his features were consistently well executed and built right the first time, minimizing bugs or rework. \nBrandon's humility and eagerness to learn set a positive example for the team. Working with him was not only productive but also enjoyable. His dedication and skill make him a valuable teammate in any project."
   },
   {
     id: 2,
-    name: "Kate D",
+    name: "Kate D.",
     feedback: "I have worked with Brandon for almost 4 years in the Solution Management Crew. He is a dedicated team player first and foremost and an empathetic leader. We worked on complex features with ambiguous requirements that required discussion and technical expertise that needed foresight and thoughtfulness. Because Brandon possesses these qualities, we were able to successfully deliver security features dealing with sign in. He is also responsible for a major feature that is used today which is called HighBot. This bot was part of a project done off work hours that is now used to make sure our pull requests are complete and robust with unit tests. \nIn addition to being technically sound, Brandon is genuinely a pleasant human being to work with and a great friend to all of us on his team. He is always up for conversation and an empathetic ear while willing to drop everything to help a teammate. I consider myself very lucky having the chance to work with Brandon in our career journey as software engineers. Any team and company would be all the better with him there."
   },
   {
     id: 3,
-    name: "Justin L",
+    name: "Justin L.",
     feedback: "Brandon joined our product/engineering team as a temporary assist to help us with a real capacity crunch. As an Accelerator he is still fairly new in his career, but his level of dedication and professionalism didn't let that impact his work. He ended up staying on our team through multiple release cycles and was a huge help in getting some really complicated front end work done. It has been great to watch him grow in confidence technically - but also in his ability to reach out, ask questions of product and make sure that his work is successful. Those skills will serve him well on his software career path, and I wish him the best!"
   },
+  {
+    id: 4,
+    name: "Neha V.",
+    feedback: "I had the pleasure of working with Brandon, and I was consistently impressed by his dedication and growth mindset. He brought strong front-end engineering skills, a thoughtful approach, and a genuine passion for building great software. What truly stood out was his commitment to growth—steadily evolving into a capable full-stack engineer by asking the right questions, diving deep into backend systems, and always seeking to understand the bigger picture.\nCollaborating with Brandon on features was not only productive but genuinely enjoyable. He took ownership of his work, cared deeply about doing things systematically, and consistently brought a positive, can-do attitude to every project. Brandon is thoughtful, reliable, communicative, and driven—always committed to doing things the right way.\nHis positive energy, sense of responsibility, and willingness to support teammates made him a real asset to the team. Any team would be fortunate to have him on board as a dependable and highly motivated engineer."
+  }
 ]

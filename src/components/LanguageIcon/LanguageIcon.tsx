@@ -1,11 +1,12 @@
 import styles from './LanguageIcon.module.css';
 
-interface LanguageProps {
+type LanguageProps = {
   language: {
     img: string;
     name: string;
   };
-}
+  id?: number;
+};
 
 const LanguageIcon = ({ language }: LanguageProps) => {
   if (!language) return null;

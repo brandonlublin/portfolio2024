@@ -1,10 +1,5 @@
 import styles from './WorkHistory.module.css';
-
-type Job = {
-  title: string;
-  company: string;
-  description: string;
-};
+import { Job } from '../../types';
 
 type WorkHistoryCardProps = {
   job: Job;

@@ -13,12 +13,18 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: auto;
+  margin: 0 auto;
   height: inherit;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
 @media screen and (max-width: 800px) {
   .header {
     position: fixed;
+  }
+  
+  .headerContainer {
+    padding: 0 16px;
   }
 }

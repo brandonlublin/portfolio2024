@@ -1,12 +1,12 @@
 import styles from './Pill.module.css';
 
-interface PillProps {
+type PillProps = {
   id: string | number;
   data: string;
-}
+};
 
 const Pill = ({ id, data }: PillProps) => (
-  <span key={`${id}${data}`} className={styles.pill}>
+  <span className={styles.pill}>
     {data}
   </span>
 );

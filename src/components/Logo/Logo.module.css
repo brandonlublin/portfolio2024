@@ -1,6 +1,9 @@
 .logoContainer {
   height: fit-content;
   display: flex;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  position: relative;
 }
 
 .logo {
@@ -12,7 +15,9 @@
   justify-content: center;
   align-items: center;
   margin-right: 20px;
-  cursor: pointer;
+  object-fit: cover;
+  transition: filter 0.2s ease;
+  position: relative;
 }
 
 @media (max-width: 1700px) {
@@ -39,4 +44,39 @@
     width: 40px;
     height: 40px;
   }
+
+  .tooltip {
+    left: 44px;
+  }
+}
+
+.tooltip {
+  position: absolute;
+  bottom: -35px;
+  left: 25px;
+  transform: translateX(-50%);
+  background-color: #2D3A36;
+  color: white;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-family: 'Geist Mono', monospace;
+  font-size: 12px;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 1000;
+  border: 1px solid #5C7A6E;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.tooltip::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 5px solid #2D3A36;
 }

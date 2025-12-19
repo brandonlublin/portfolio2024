@@ -1,4 +1,6 @@
+import { motion } from 'framer-motion';
 import styles from './Title.module.css';
+import { scrollFadeInUp, defaultTransition } from '../../utils/animations';
 
 type TitleProps = {
   titleText: string;
@@ -6,9 +8,13 @@ type TitleProps = {
 
 const Title = ({ titleText }: TitleProps) => {
   return (
-    <div className={styles.headerSection}>
+    <motion.div
+      className={styles.headerSection}
+      {...scrollFadeInUp}
+      transition={defaultTransition}
+    >
       {titleText}
-    </div>
+    </motion.div>
   );
 };
 

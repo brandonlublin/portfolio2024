@@ -1,34 +1,50 @@
-.name {
+.nameContainer {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 0;
+}
+
+.nameBorder {
+  width: 8px;
+  margin: 16px 0 10px;
+  background-color: #B86E5C;
+  flex-shrink: 0;
+  margin-right: 8px;
+}
+
+.nameWrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.firstName,
+.lastName {
   font-family: 'DIN Condensed', sans-serif;
   font-size: 100px;
   text-transform: uppercase;
   line-height: 100px;
-  height: 152px;
-  padding-top: 23px;
-  border-left: 8px solid #B86E5C;
+  padding: 0;
+  margin: 0;
   text-shadow: 
   2px 2px 4px rgba(0, 0, 0, 0.5), 
   -2px -2px 4px rgba(255, 255, 255, 0.2);
-}
-
-.nameContainer { 
-  display: flex;
-  margin: 2px;
-  align-items: center;
-  height: 275px;
 }
 
 .title {
   font-family: 'DIN Condensed Alternate', sans-serif;
   text-transform: uppercase;
   font-size: 30px;
-  margin-top: 50px;
+  margin-top: 24px;
 }
 
 .quirksContainer {
-  width: 515px;
+  width: 600px;
   font-size: 14px;
   margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
 }
 
 .languagesContainer {
@@ -36,6 +52,7 @@
   margin-top: 32px;
   width: 515px;
   font-size: 14px;
+  gap: 16px;
 }
 .aboutMeContainer {
   transition: height 0.3s ease, padding 0.3s ease;
@@ -54,32 +71,55 @@
 }
 
 @media (max-width: 1700px) {
-  .name {
-    font-size: 60px;
-    line-height: 60px;
-    height: 32px;
-    padding-left: 6px;
-    padding-top: 14px;
+  .nameContainer {
+    height: 72px;
+  }
+  .nameBorder {
+    width: 6px;
+    margin: 12px 8px 8px 0px;
+  }
+  .nameWrapper {
+    padding-top: 0;
+    flex-direction: row;
+    gap: 8px;
+    align-items: center;
+  }
+  .firstName,
+  .lastName {
+    font-size: 72px;
+    line-height: 72px;
+    white-space: nowrap;
   }
   .aboutMeContainer {
     padding: 0;
     margin: 0;
   }
   .title {
-    font-size: 20px;
+    font-size: 32px;
+    font-style: italic;
   }
   .quirksContainer {
-    font-size: 12px;
     margin-bottom: 20px;
+    width: 100%;
   }
 }
 
 @media (max-width: 800px) {
-  .name {
-    font-size: 34px;
-    padding-left: 6px;
-    line-height: 0.7;
-    max-height: 14px;
+  .nameBorder {
+    width: 6px;
+    margin-right: 6px;
+  }
+  .aboutMeContainer {
+    padding: 0;
+    margin: 24px;
+  }
+  .nameWrapper {
+    padding-top: 0;
+  }
+  .firstName,
+  .lastName {
+    font-size: 72px;
+    line-height: 72px;
   }
   .title {
     font-size: 16px;
@@ -93,3 +133,10 @@
   }
 }
 
+@media (max-width: 650px) {
+  .firstName,
+  .lastName {
+    font-size: 48px;
+    line-height: 48px;
+  }
+}

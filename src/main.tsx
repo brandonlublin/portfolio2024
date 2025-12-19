@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom/client';
-import Experience from './routes/experience';
 import Home from './routes/Home';
+import Contact from './routes/Contact';
 
 import {
   createBrowserRouter,
@@ -14,6 +14,14 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <Home />,
+  },
+  {
+    path: '/project/:slug',
+    element: <Home />,
+  },
+  {
+    path: '/contact',
+    element: <Contact />,
   },
   {
     path: '/about',

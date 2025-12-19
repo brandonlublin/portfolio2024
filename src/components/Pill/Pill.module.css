@@ -17,3 +17,9 @@
 .pill:last-child {
   border-right: none;
 }
+
+@media (max-width: 800px) {
+  .pill {
+    font-size: 12px;
+  }
+}

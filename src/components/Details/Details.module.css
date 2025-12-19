@@ -1,35 +1,4 @@
-
 .detailsContainer {
-  position: relative; 
-}
-
-.scrollToTopButton {
-  cursor: pointer;
-  margin: 36px 42px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 48px;
-  flex-direction: column;
-  padding-bottom: 90px;
-}
-
-.scrollToTopButton img {
-  width: 24px;
-  height: 24px;
-  padding: 5px;
-}
-
-.arrow {
-  width: 40px;
-  height: 40px;
-  background-color: #B86E5C;
-  border: none;
-  border-radius: 50%;
-  margin-bottom: 12px;
-}
-
-.backToTop {
-  font-size: 16px;
-  font-family: 'DIN Condensed Alternate', sans-serif;
+  position: relative;
+  padding-bottom: 50px;
 }
