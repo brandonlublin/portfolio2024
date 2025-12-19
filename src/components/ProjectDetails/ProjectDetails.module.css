@@ -183,3 +183,33 @@
     padding: 15px;
   }
 }
+
+@media (max-width: 430px) {
+  .projectDetailsContent {
+    padding: 20px 24px 60px 24px;
+  }
+  .projectDescription {
+    font-size: 0.95rem;
+  }
+  .projectResearch {
+    font-size: 0.9rem;
+  }
+  .projectResearch ul {
+    font-size: 0.9rem;
+  }
+  .todos {
+    font-size: 0.9rem;
+  }
+  .todos ul {
+    font-size: 0.9rem;
+  }
+  .screenshotLabel {
+    font-size: 0.8rem;
+  }
+  .gitHubLink a {
+    font-size: 0.95rem;
+  }
+  .backButton {
+    margin-top: 24px;
+  }
+}

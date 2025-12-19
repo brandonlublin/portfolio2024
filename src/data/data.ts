@@ -21,7 +21,7 @@ export const projects = [
   {
     id: 1,
     title: "Recipe Finder",
-    description: "I built this because I was tired of scrolling through endless recipe sites trying to find something that actually worked with what I had in my fridge. It's a simple tool, but it does exactly what I needed – lets me search by what I've got, filter by what I'm in the mood for, and actually find recipes that make sense for my life.",
+    description: "I built this because I was tired of scrolling through endless recipe sites trying to find something that actually worked with what I had in my fridge. It's a simple tool, but it does exactly what I needed: lets me search by what I've got, filter by what I'm in the mood for, and actually find recipes that make sense for my life.",
     gitHubLink: "https://github.com/brandonlublin/recipe-finder",
     screenshots: [
       {
@@ -32,7 +32,7 @@ export const projects = [
       {
         id: 2,
         imgUrl: recipeDetails,
-        label: "When you find a recipe you like, you get all the details – ingredients, steps, even the nutritional info",
+        label: "When you find a recipe you like, you get all the details: ingredients, steps, even the nutritional info",
       },
       {
         id: 3,
@@ -42,7 +42,7 @@ export const projects = [
       {
         id: 4,
         imgUrl: filterCuisineRecipeFinder,
-        label: "The filters are what make this actually useful – cuisine type, dietary restrictions, all that stuff",
+        label: "The filters are what make this actually useful: cuisine type, dietary restrictions, all that stuff",
       }
     ],
     research: [
@@ -61,9 +61,9 @@ export const projects = [
   {
     id: 2,
     title: "Job Applicator",
-    description: "Job hunting is exhausting. I was bouncing between LinkedIn, Indeed, and like five other sites, and I kept losing track of what I'd applied to where. So I built this to bring everything into one place. It's not fancy, but it lets me filter by what actually matters to me – salary, remote work, that kind of stuff – so I can be way more intentional about where I'm putting my energy.",
+    description: "Job hunting is exhausting. I was bouncing between LinkedIn, Indeed, and like five other sites, and I kept losing track of what I'd applied to where. So I built this to bring everything into one place. It's not fancy, but it lets me filter by what actually matters to me: salary, remote work, that kind of stuff, so I can be way more intentional about where I'm putting my energy.",
     gitHubLink: "https://github.com/brandonlublin/jobapplicator",
-    todos: ["I really want to add more analytics around my job applications – like tracking response rates, time to hear back, that kind of thing", "I keep saying I'll get this hosted, but honestly it's been demoted to house projects lately. Maybe one day."],
+    todos: ["I really want to add more analytics around my job applications: like tracking response rates, time to hear back, that kind of thing", "I keep saying I'll get this hosted, but honestly it's been demoted to house projects lately. Maybe one day."],
     screenshots: [
       {
         id: 1,
@@ -83,7 +83,7 @@ export const projects = [
       {
         id: 4,
         imgUrl: filterJobs,
-        label: "The filters are the whole point – salary range, remote only, stuff like that",
+        label: "The filters are the whole point: salary range, remote only, stuff like that",
       },
       {
         id: 5,
@@ -109,7 +109,7 @@ export const projects = [
     capabilities: [
       "Pulls jobs from multiple places and puts them all in one spot",
       "You can add jobs manually if you find them somewhere else",
-      "Filter by salary, remote work, job type – the stuff that actually matters",
+      "Filter by salary, remote work, job type: the stuff that actually matters",
       "Track what you've applied to so you don't lose track or double-apply",
       "Quick links to apply directly from the dashboard",
     ],
@@ -199,7 +199,7 @@ export const peerFeedback = [
   {
     id: 1,
     name: "Matt I.",
-    feedback: "Brandon and I worked on the Identity and Access Management crew at Highspot. Our collaboration fantastic – his positive attitude, can-do spirit, and willingness to work through problems together made every interaction a joy. \nI particularly appreciated how his features were consistently well executed and built right the first time, minimizing bugs or rework. \nBrandon's humility and eagerness to learn set a positive example for the team. Working with him was not only productive but also enjoyable. His dedication and skill make him a valuable teammate in any project."
+    feedback: "Brandon and I worked on the Identity and Access Management crew at Highspot. Our collaboration fantastic: his positive attitude, can-do spirit, and willingness to work through problems together made every interaction a joy. \nI particularly appreciated how his features were consistently well executed and built right the first time, minimizing bugs or rework. \nBrandon's humility and eagerness to learn set a positive example for the team. Working with him was not only productive but also enjoyable. His dedication and skill make him a valuable teammate in any project."
   },
   {
     id: 2,
@@ -214,6 +214,6 @@ export const peerFeedback = [
   {
     id: 4,
     name: "Neha V.",
-    feedback: "I had the pleasure of working with Brandon, and I was consistently impressed by his dedication and growth mindset. He brought strong front-end engineering skills, a thoughtful approach, and a genuine passion for building great software. What truly stood out was his commitment to growth—steadily evolving into a capable full-stack engineer by asking the right questions, diving deep into backend systems, and always seeking to understand the bigger picture.\nCollaborating with Brandon on features was not only productive but genuinely enjoyable. He took ownership of his work, cared deeply about doing things systematically, and consistently brought a positive, can-do attitude to every project. Brandon is thoughtful, reliable, communicative, and driven—always committed to doing things the right way.\nHis positive energy, sense of responsibility, and willingness to support teammates made him a real asset to the team. Any team would be fortunate to have him on board as a dependable and highly motivated engineer."
+    feedback: "I had the pleasure of working with Brandon, and I was consistently impressed by his dedication and growth mindset. He brought strong front-end engineering skills, a thoughtful approach, and a genuine passion for building great software. What truly stood out was his commitment to growth: steadily evolving into a capable full-stack engineer by asking the right questions, diving deep into backend systems, and always seeking to understand the bigger picture.\nCollaborating with Brandon on features was not only productive but genuinely enjoyable. He took ownership of his work, cared deeply about doing things systematically, and consistently brought a positive, can-do attitude to every project. Brandon is thoughtful, reliable, communicative, and driven, always committed to doing things the right way.\nHis positive energy, sense of responsibility, and willingness to support teammates made him a real asset to the team. Any team would be fortunate to have him on board as a dependable and highly motivated engineer."
   }
 ]
