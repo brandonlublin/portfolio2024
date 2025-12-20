@@ -7,10 +7,16 @@
   box-sizing: border-box;
   overflow: hidden;
   color: white;
-  background-color: #3D4E47;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(180deg, #3D4E47 0%, #2d3a36 100%);
+  box-shadow: 
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    0 16px 64px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.2);
   border: 1px solid #5C7A6E;
+  border-top: 1px solid rgba(92, 122, 110, 0.5);
   overflow: scroll;
+  position: relative;
 }
 
 .projectHeader {
@@ -33,6 +39,11 @@
   border-left: 8px solid #B86E5C;
   padding-left: 6px;
   line-height: 26px;
+  position: relative;
+  box-shadow: 
+    -4px 0 12px rgba(184, 110, 92, 0.3),
+    -2px 0 6px rgba(184, 110, 92, 0.2);
+  filter: drop-shadow(-2px 0 4px rgba(184, 110, 92, 0.2));
 }
 
 .projectDescription {
@@ -99,8 +110,21 @@
   width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.3),
+    0 8px 24px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
   margin-bottom: 12px;
+  border: 1px solid rgba(92, 122, 110, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.screenshot:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 20px rgba(0, 0, 0, 0.4),
+    0 12px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
 }
 
 .screenshotLabel {

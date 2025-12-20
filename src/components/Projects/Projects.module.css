@@ -3,10 +3,15 @@
   flex-direction: column;
   padding: 36px;
   max-width: 754px;
-  max-height: 300px;
-  background-color: #2D3A36;
+  min-height: 200px;
+  background: linear-gradient(180deg, #2D3A36 0%, #25302c 100%);
   border-bottom: 1px solid #5C7A6E;
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.2),
+    0 4px 16px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.03);
   transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease, opacity 0.3s ease;
+  position: relative;
 }
 
 .languageArrowContainer {
@@ -66,6 +71,10 @@
   line-height: 20px;
   border-left: 8px solid #B86E5C;
   padding-left: 6px;
+  box-shadow: 
+    -4px 0 12px rgba(184, 110, 92, 0.3),
+    -2px 0 6px rgba(184, 110, 92, 0.2);
+  filter: drop-shadow(-2px 0 4px rgba(184, 110, 92, 0.2));
 }
 
 .projectTopRow {
@@ -74,8 +83,13 @@
 }
 
 .projectCard:hover {
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); 
-  background-color: #3D4E47; 
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.3),
+    0 12px 32px rgba(0, 0, 0, 0.25),
+    0 0 20px rgba(184, 110, 92, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  background: linear-gradient(180deg, #3D4E47 0%, #35423d 100%);
 }
 
 .projectCard:hover ~ .projectCard,
@@ -102,6 +116,9 @@
   font-family: 'Geist Mono', monospace;
   font-size: 14px;
   width: auto;
+  line-height: 1.6;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .languageContainer {

@@ -1,5 +1,5 @@
 .profileLink {
-  background-color: #2D3A36;
+  background: linear-gradient(180deg, #2D3A36 0%, #25302c 100%);
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -9,6 +9,27 @@
   margin-right: 20px;
   cursor: pointer;
   position: relative;
+  box-shadow: 
+    0 2px 8px rgba(0, 0, 0, 0.2),
+    0 4px 12px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(92, 122, 110, 0.3);
+}
+
+.profileLink:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 4px 12px rgba(0, 0, 0, 0.3),
+    0 6px 16px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.profileLink:active {
+  transform: translateY(0);
+  box-shadow: 
+    0 1px 4px rgba(0, 0, 0, 0.2),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .profileLink .linkText {
@@ -28,6 +49,7 @@
     padding: 8px 16px;
     border-radius: 4px;
     gap: 8px;
+    border-radius: 4px;
   }
 
   .profileLink .linkText {

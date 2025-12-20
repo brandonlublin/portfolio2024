@@ -1,11 +1,16 @@
 .header {
   height: 86px;
-  background-color: #5C7A6E;
+  background: linear-gradient(180deg, #5C7A6E 0%, #4a6560 100%);
   width: 100%;
   position: sticky;
   top: 0;
   width: 100%;
   z-index: 1000;
+  box-shadow: 
+    0 4px 16px rgba(0, 0, 0, 0.3),
+    0 2px 8px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(92, 122, 110, 0.5);
 }
 
 .headerContainer {

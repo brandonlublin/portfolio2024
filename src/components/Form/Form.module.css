@@ -17,18 +17,25 @@
   font-family: 'Geist Mono', monospace;
   font-size: 16px;
   padding: 12px 16px;
-  background-color: #2D3A36;
+  background: linear-gradient(180deg, #2D3A36 0%, #25302c 100%);
   border: 1px solid #5C7A6E;
   border-radius: 4px;
   color: white;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 
+    inset 0 2px 4px rgba(0, 0, 0, 0.2),
+    0 1px 2px rgba(0, 0, 0, 0.1);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
 }
 
 .input:focus,
 .textarea:focus {
   outline: none;
   border-color: #B86E5C;
-  box-shadow: 0 0 0 2px rgba(184, 110, 92, 0.2);
+  box-shadow: 
+    0 0 0 2px rgba(184, 110, 92, 0.2),
+    0 0 12px rgba(184, 110, 92, 0.15),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2);
+  transform: translateY(-1px);
 }
 
 .textarea {
@@ -41,17 +48,34 @@
   font-size: 18px;
   text-transform: uppercase;
   padding: 14px 32px;
-  background-color: #B86E5C;
+  background: linear-gradient(180deg, #B86E5C 0%, #9a5a4a 100%);
   color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  box-shadow: 
+    0 4px 12px rgba(184, 110, 92, 0.3),
+    0 2px 6px rgba(0, 0, 0, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
   margin-top: 8px;
 }
 
 .submitButton:hover:not(:disabled) {
-  background-color: #d88a7a;
+  background: linear-gradient(180deg, #d88a7a 0%, #c57868 100%);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 6px 16px rgba(184, 110, 92, 0.4),
+    0 4px 10px rgba(0, 0, 0, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.submitButton:active:not(:disabled) {
+  transform: translateY(0);
+  box-shadow: 
+    0 2px 6px rgba(184, 110, 92, 0.3),
+    0 1px 3px rgba(0, 0, 0, 0.2),
+    inset 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .submitButton:disabled {
@@ -74,4 +98,5 @@
   margin-top: 12px;
   text-align: center;
 }
+
 
