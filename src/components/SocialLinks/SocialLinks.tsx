@@ -62,3 +62,4 @@ const SocialLinks = ({ profiles, showResume = true }: SocialLinksProps) => {
 export default SocialLinks;
 
 
+

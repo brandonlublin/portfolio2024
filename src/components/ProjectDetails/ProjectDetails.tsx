@@ -62,6 +62,13 @@ const ProjectDetails = ({ project, onBack }: ProjectProps) => {
       <img src={project.img} alt={project.imgAlt} />
       <h2 className={styles.projectTitle}>{project.title}</h2>
     </div>
+    {project.liveDemoUrl && (
+      <div className={styles.liveDemoLink}>
+        <a href={project.liveDemoUrl} target="_blank" rel="noopener noreferrer">
+          View Live Demo
+        </a>
+      </div>
+    )}
     <div className={styles.projectDescription}>{project.description}</div>
     <div className={styles.projectResearch}>
       <div className={styles.sectionLabel}>Research</div>

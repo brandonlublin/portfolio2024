@@ -5,44 +5,42 @@ import rubyIcon from '../assets/icons/ruby.png';
 import githubIcon from '../assets/icons/github.png';
 import linkedinIcon from '../assets/icons/linkedin.png';
 import resumeIcon from '../assets/icons/resume.png';
-import recipeDetails from '../assets/images/recipe-details-recipe-finder.png';
-import homepageRecipeFinder from '../assets/images/homepage-recipe-finder.png';
-import paginationRecipeFinder from '../assets/images/pagination-recipe-finder.png';
-import filterCuisineRecipeFinder from '../assets/images/filter-cuisine-type-recipe-finder.png';
-import addJob from '../assets/images/add-job.png';
-import jobPostings from '../assets/images/job-postings.png';
-import filterJobs from '../assets/images/filter-jobs.png';
-import applyVia from '../assets/images/apply-via.png';
-import jobHomepage from '../assets/images/homepage.png';
-import appliedJob from '../assets/images/applied-job.png';
-import expandedJob from '../assets/images/expanded-job.png';
+import recipeHomepage from '../assets/images/recipe-homepage.png';
+import recipeDetails from '../assets/images/recipe-details.png';
+import favoriteRecipes from '../assets/images/favorite-recipes.png';
+import filterRecipesMobile from '../assets/images/filter-recipes-mobile.png';
+import jobApplicatorHomepage from '../assets/images/job-applicator-homepage-light.png';
+import addJobModal from '../assets/images/add-job-modal-dark.png';
+import jobListingsPostSearch from '../assets/images/job-listings-post-search-dark.png';
+import myAppliedJobs from '../assets/images/my-applied-jobs-light.png';
 
 export const projects = [
   {
     id: 1,
     title: "Recipe Finder",
-    description: "I built this because I was tired of scrolling through endless recipe sites trying to find something that actually worked with what I had in my fridge. It's a simple tool, but it does exactly what I needed: lets me search by what I've got, filter by what I'm in the mood for, and actually find recipes that make sense for my life.",
+    description: "I built this because I was tired of scrolling through endless recipe sites trying to find something that actually worked with what I had in my fridge. It's a simple tool, but it does exactly what I needed: lets me search by what I've got, filter by what I'm in the mood for, and actually find recipes that make sense for my life. I added a light/dark mode toggle so you can use it comfortably at any time of day, and built in a favorites feature so you can save recipes you want to come back to.",
     gitHubLink: "https://github.com/brandonlublin/recipe-finder",
+    liveDemoUrl: "https://recipe-finder.up.railway.app/",
     screenshots: [
       {
         id: 1,
-        imgUrl: homepageRecipeFinder,
-        label: "The main search page where you can filter by ingredients, cuisine, and dietary needs",
+        imgUrl: recipeHomepage,
+        label: "Recipe homepage with search functionality to find recipes by ingredients, cuisine type, and dietary preferences",
       },
       {
         id: 2,
         imgUrl: recipeDetails,
-        label: "When you find a recipe you like, you get all the details: ingredients, steps, even the nutritional info",
+        label: "Recipe details page showing full instructions, ingredient list, and nutritional information",
       },
       {
         id: 3,
-        imgUrl: paginationRecipeFinder,
-        label: "I spent way too much time getting the pagination right. You can jump to any page, and it shows you how many pages there are total",
+        imgUrl: favoriteRecipes,
+        label: "Favorite recipes feature allowing users to save and access their preferred recipes",
       },
       {
         id: 4,
-        imgUrl: filterCuisineRecipeFinder,
-        label: "The filters are what make this actually useful: cuisine type, dietary restrictions, all that stuff",
+        imgUrl: filterRecipesMobile,
+        label: "Mobile filter interface for selecting cuisine types and dietary restrictions to refine recipe search",
       }
     ],
     research: [
@@ -51,8 +49,12 @@ export const projects = [
     ],
     capabilities: [
       "Search by recipe name or just throw in whatever ingredients you have lying around",
-      "Filter by cuisine type (Italian, Indian, whatever you're craving) and dietary stuff (vegetarian, vegan, gluten-free)",
-      "See the full recipe with instructions, ingredients list, and nutritional info",
+      "Filter by cuisine type (Italian, Indian, whatever you're craving) and dietary restrictions (vegetarian, vegan, gluten-free)",
+      "See the full recipe with step-by-step instructions, detailed ingredients list, and comprehensive nutritional information",
+      "Light/dark mode toggle for comfortable viewing in any lighting condition",
+      "Save your favorite recipes to a personal collection for quick access later",
+      "Fully responsive design that works seamlessly on mobile, tablet, and desktop devices",
+      "Pagination controls for easy navigation through large recipe collections",
     ],
     img: recipeIcon,
     imgAlt: "recipe icon",
@@ -61,44 +63,30 @@ export const projects = [
   {
     id: 2,
     title: "Job Applicator",
-    description: "Job hunting is exhausting. I was bouncing between LinkedIn, Indeed, and like five other sites, and I kept losing track of what I'd applied to where. So I built this to bring everything into one place. It's not fancy, but it lets me filter by what actually matters to me: salary, remote work, that kind of stuff, so I can be way more intentional about where I'm putting my energy.",
+    description: "Job hunting is exhausting. I was bouncing between LinkedIn, Indeed, and like five other sites, and I kept losing track of what I'd applied to where. So I built this to bring everything into one place. It's not fancy, but it lets me filter by what actually matters to me: salary, remote work, that kind of stuff, so I can be way more intentional about where I'm putting my energy. I implemented a comprehensive light/dark mode system that persists your preference, making those late-night job searches a lot easier on the eyes. The app aggregates jobs from multiple sources, lets you manually add postings you find elsewhere, and tracks your application status all in one centralized dashboard.",
     gitHubLink: "https://github.com/brandonlublin/jobapplicator",
-    todos: ["I really want to add more analytics around my job applications: like tracking response rates, time to hear back, that kind of thing", "I keep saying I'll get this hosted, but honestly it's been demoted to house projects lately. Maybe one day."],
+    liveDemoUrl: "https://job-applicator.up.railway.app/",
+    todos: ["I really want to add more analytics around my job applications: like tracking response rates, time to hear back, that kind of thing"],
     screenshots: [
       {
         id: 1,
-        imgUrl: jobHomepage,
-        label: "The main dashboard where all the jobs live. Clean and simple, which is what I needed",
+        imgUrl: jobApplicatorHomepage,
+        label: "Job Applicator homepage dashboard displaying all job postings in a centralized view",
       },
       {
         id: 2,
-        imgUrl: addJob,
-        label: "Sometimes you find a job somewhere else, so I made it easy to just add it manually",
+        imgUrl: addJobModal,
+        label: "Add job modal form for manually entering job postings found outside the platform",
       },
       {
         id: 3,
-        imgUrl: jobPostings,
-        label: "All the jobs in one place. No more switching between tabs",
+        imgUrl: jobListingsPostSearch,
+        label: "Job listings view showing search results and available positions after filtering",
       },
       {
         id: 4,
-        imgUrl: filterJobs,
-        label: "The filters are the whole point: salary range, remote only, stuff like that",
-      },
-      {
-        id: 5,
-        imgUrl: applyVia,
-        label: "Click through to apply right from here. Saves me a few seconds, which adds up",
-      },
-      {
-        id: 6,
-        imgUrl: appliedJob,
-        label: "This is where I track what I've actually applied to. Helps me not double-apply or lose track",
-      },
-      {
-        id: 7,
-        imgUrl: expandedJob,
-        label: "When you click on a job, you get all the details. Sometimes I just need to see everything at once",
+        imgUrl: myAppliedJobs,
+        label: "My applied jobs tracking view to monitor application status and prevent duplicates",
       }
     ],
     research: [

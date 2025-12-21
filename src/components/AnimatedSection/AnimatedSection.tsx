@@ -23,3 +23,4 @@ const AnimatedSection = ({ children, className, delay = 0 }: AnimatedSectionProp
 export default AnimatedSection;
 
 
+

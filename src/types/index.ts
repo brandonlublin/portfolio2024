@@ -6,6 +6,7 @@ export type Project = {
   description: string;
   languages: string[];
   gitHubLink: string;
+  liveDemoUrl?: string;
   screenshots: { imgUrl: string; label: string }[];
   research: string[];
   capabilities: string[];
