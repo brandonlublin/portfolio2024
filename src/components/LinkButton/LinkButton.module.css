@@ -15,6 +15,7 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
   transition: transform 0.2s ease, box-shadow 0.3s ease;
   border: 1px solid rgba(92, 122, 110, 0.3);
+  text-decoration: none;
 }
 
 .profileLink:hover {
@@ -23,6 +24,7 @@
     0 4px 12px rgba(0, 0, 0, 0.3),
     0 6px 16px rgba(0, 0, 0, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  text-decoration: none;
 }
 
 .profileLink:active {
@@ -58,6 +60,7 @@
     font-size: 14px;
     color: white;
     text-transform: uppercase;
+    text-decoration: none;
   }
 
   .letterIcon {

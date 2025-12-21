@@ -12,6 +12,8 @@ const Logo = () => {
   const handleClick = () => {
     if (location.pathname !== '/') {
       navigate('/');
+    } else {
+      window.location.reload();
     }
   };
 
@@ -58,7 +60,7 @@ const Logo = () => {
         }}
       />
       <AnimatePresence>
-        {showTooltip && !isHome && (
+        {showTooltip && (
           <motion.div
             className={styles.tooltip}
             initial={{ opacity: 0, y: -5 }}
@@ -66,7 +68,7 @@ const Logo = () => {
             exit={{ opacity: 0, y: -5 }}
             transition={{ duration: 0.2 }}
           >
-            Go to Home
+            {isHome ? 'Refresh' : 'Go to Home'}
           </motion.div>
         )}
       </AnimatePresence>

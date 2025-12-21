@@ -71,10 +71,6 @@
   line-height: 20px;
   border-left: 8px solid #B86E5C;
   padding-left: 6px;
-  box-shadow: 
-    -4px 0 12px rgba(184, 110, 92, 0.3),
-    -2px 0 6px rgba(184, 110, 92, 0.2);
-  filter: drop-shadow(-2px 0 4px rgba(184, 110, 92, 0.2));
 }
 
 .projectTopRow {

@@ -40,10 +40,6 @@
   padding-left: 6px;
   line-height: 26px;
   position: relative;
-  box-shadow: 
-    -4px 0 12px rgba(184, 110, 92, 0.3),
-    -2px 0 6px rgba(184, 110, 92, 0.2);
-  filter: drop-shadow(-2px 0 4px rgba(184, 110, 92, 0.2));
 }
 
 .projectDescription {
