@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import ProjectList from '../Projects/ProjectList';
 import Title from '../Title/Title';
-import { projects, skills } from '../../data/data';
+import { projects, vibeProjects, skills } from '../../data/data';
 import styles from './Details.module.css';
 import HowDidIGetHere from '../HowDidIGetHere/HowDidIGetHere';
 import CollapsibleSkills from '../CollapsibleSkills/CollapsibleSkills';
@@ -83,6 +83,12 @@ const Details = ({ selectedProject, openProjectDetails }: DetailsProps) => {
   return (
     <div className={styles.detailsContainer}>
       <ProjectList projects={projects} onSelectProject={openProjectDetails}/>
+      <Title titleText={'Vibe coded projects'} />
+      <p className={styles.vibeSectionIntro}>
+        Side projects and experiments I have been building and reshaping with AI-assisted workflows. Same stack
+        obsession, faster iteration loops, and plenty of rough edges worth shipping anyway.
+      </p>
+      <ProjectList projects={vibeProjects} onSelectProject={openProjectDetails} />
       <Title titleText={'How did I get here?'}/>
       <HowDidIGetHere />
       <Title titleText={'What makes me tick'} />

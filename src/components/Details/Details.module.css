@@ -2,3 +2,20 @@
   position: relative;
   padding-bottom: 50px;
 }
+
+.vibeSectionIntro {
+  font-family: 'Geist Mono', monospace;
+  font-size: 14px;
+  line-height: 1.65;
+  max-width: 754px;
+  margin: 0 0 40px;
+  padding: 12px 36px 0;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+@media (max-width: 768px) {
+  .vibeSectionIntro {
+    padding: 12px 24px 0;
+    font-size: 12px;
+  }
+}

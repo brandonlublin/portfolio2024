@@ -59,7 +59,9 @@ const ProjectDetails = ({ project, onBack }: ProjectProps) => {
       <span className={styles.backArrow}></span>
     </motion.button>
     <div className={styles.projectHeader}>
-      <img src={project.img} alt={project.imgAlt} />
+      {project.img ? (
+        <img src={project.img} alt={project.imgAlt} />
+      ) : null}
       <h2 className={styles.projectTitle}>{project.title}</h2>
     </div>
     {project.liveDemoUrl && (

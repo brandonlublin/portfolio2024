@@ -1,5 +1,7 @@
 export type Project = {
   id: number;
+  /** When set, used in /project/:slug URLs instead of slugifying the title. */
+  slug?: string;
   title: string;
   img: string;
   imgAlt: string;

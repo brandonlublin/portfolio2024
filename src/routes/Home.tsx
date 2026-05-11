@@ -6,7 +6,7 @@ import ProjectDetails from "../components/ProjectDetails/ProjectDetails";
 import '../index.css';
 import Header from '../components/Header/Header';
 import { Project } from '../types';
-import { projects } from '../data/data';
+import { projects, vibeProjects } from '../data/data';
 
 const slugify = (text: string): string => {
   return text
@@ -17,8 +17,12 @@ const slugify = (text: string): string => {
     .trim();
 };
 
+const projectSlug = (p: Project): string => p.slug ?? slugify(p.title);
+
+const allProjects: Project[] = [...projects, ...vibeProjects];
+
 const findProjectBySlug = (slug: string): Project | undefined => {
-  return projects.find(p => slugify(p.title) === slug);
+  return allProjects.find((p) => projectSlug(p) === slug);
 };
 
 const Home = () => {
@@ -40,7 +44,7 @@ const Home = () => {
   }, [slug, navigate]);
 
   const openProjectDetails = (project: Project) => {
-    navigate(`/project/${slugify(project.title)}`);
+    navigate(`/project/${projectSlug(project)}`);
   };
 
   const closeProjectDetails = () => {

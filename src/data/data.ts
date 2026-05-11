@@ -107,6 +107,152 @@ export const projects = [
   },
 ];
 
+export const vibeProjects: Project[] = [
+  {
+    id: 1001,
+    slug: "algotrainer",
+    title: "AlgoTrainer",
+    description:
+      "A full-stack study companion for algorithms and interview prep: browse a structured library, walk step-by-step guides, run code in a Monaco-powered lab with tests, and drill practice problems with hints and writeups. I use it to keep learning loops tight and to experiment with how far I can push guided practice in the browser.",
+    gitHubLink: "https://github.com/brandonlublin/AlgoTrainer",
+    img: reactIcon,
+    imgAlt: "React icon",
+    languages: ["React", "TypeScript", "Node", "Express", "MongoDB", "OpenAI"],
+    screenshots: [],
+    research: [
+      "Mapped out discovery, learning, practice, and lab flows early so routing and state did not turn into spaghetti as features stacked up.",
+      "Spent time on editor ergonomics (Monaco, keyboard shortcuts, test runs) because if running code feels clunky, nobody stays in the lab.",
+      "Explored how much coaching belongs in the product versus in the model so explanations stay trustworthy and debuggable.",
+    ],
+    capabilities: [
+      "Algorithm library with search, filters, and rich step content (mental models, pitfalls, checkpoints).",
+      "Hands-on lab with code editor, test runner, and progressive code-chunk reveals.",
+      "Practice mode with hints, solutions, and navigation tuned for repeated reps.",
+      "Express API with MongoDB persistence, plus Vitest and Playwright coverage for confidence while iterating.",
+    ],
+  },
+  {
+    id: 1002,
+    slug: "golftracker",
+    title: "GolfTracker",
+    description:
+      "A React and Supabase app that mixes fantasy-style tournament tracking with a real scorekeeper flow: log in, set up rounds, enter scores hole by hole, and see how match play and leaderboards evolve as the card fills in. Tailwind keeps the UI fast to tweak when I am iterating on the course carousel and scorecard layouts.",
+    gitHubLink: "https://github.com/brandonlublin/GolfTracker",
+    img: reactIcon,
+    imgAlt: "React icon",
+    languages: ["React", "TypeScript", "Vite", "Tailwind CSS", "Supabase"],
+    screenshots: [],
+    research: [
+      "Worked through how to model tournaments, pairings, and holes so the same data can power both fantasy picks and live scorekeeping.",
+      "Compared client-side score math versus database truth to avoid race conditions when multiple scores land quickly.",
+      "Leaned on Supabase auth and row-level patterns so the scorekeeper area stays scoped to the right players and rounds.",
+    ],
+    capabilities: [
+      "Authenticated scorekeeper with setup, round hub, scorecard entry, and leaderboard views.",
+      "Hole-by-hole carousel and score entry tuned for quick updates mid-round.",
+      "Match play calculations and stroke maps layered on top of stored gross scores.",
+      "Vercel-friendly static hosting with Supabase as the backing API and database.",
+    ],
+  },
+  {
+    id: 1003,
+    slug: "sourdough4starters",
+    title: "Sourdough4Starters",
+    description:
+      "A sourdough journal concept I am growing into a full bake tracker: phases, timers, hydration math, photos, and analytics across bread, pizza, and other bakes. The public repo is still lightweight, but the direction is a single place to learn from every loaf instead of scattered notes and camera-roll scrolls.",
+    gitHubLink: "https://github.com/brandonlublin/Sourdough4Starters",
+    img: reactIcon,
+    imgAlt: "React icon",
+    languages: ["React", "TypeScript", "Node", "MongoDB"],
+    screenshots: [],
+    research: [
+      "Looked at how home bakers actually work: timers, notifications, and per-phase photos matter as much as ingredient lists.",
+      "Thought about hydration and blend math so the app can do the annoying arithmetic while I focus on feel and timing.",
+      "Planned analytics (frequency, scores, hydration trends) so the journal doubles as feedback for the next bake.",
+    ],
+    capabilities: [
+      "Roadmap toward phase timers with reminders, per-bake timelines, and structured quality notes.",
+      "Recipe-style fields for flour blends, starter amount, salt, inclusions, and outcomes.",
+      "History and search so past bakes stay referenceable instead of disappearing into notes apps.",
+      "Dark mode and PWA-style ergonomics for messy kitchen use.",
+    ],
+    todos: [
+      "Flesh out the public codebase to match the richer journal flow I am prototyping locally.",
+    ],
+  },
+  {
+    id: 1004,
+    slug: "menudashboard",
+    title: "MenuDashboard",
+    description:
+      "A personal life dashboard monorepo: a React client for todos, calendar, journal, gratitude, goals, hobbies, learning, pomodoro, and more, backed by an Express service with MongoDB, Google Calendar hooks, JWT auth, and shared Zod types. It is the kitchen-sink app where I try product ideas and integrations I actually use every day.",
+    gitHubLink: "https://github.com/brandonlublin/MenuDashboard",
+    img: reactIcon,
+    imgAlt: "React icon",
+    languages: ["React", "TypeScript", "Node", "Express", "MongoDB"],
+    screenshots: [],
+    research: [
+      "Split webapp, server, and shared packages so schemas stay aligned between forms and API validation.",
+      "Integrated Google APIs and Redis-backed pieces where rate limits and caching matter.",
+      "Balanced breadth (many modules) with consistent layout, keyboard shortcuts, and theme handling so the app still feels cohesive.",
+    ],
+    capabilities: [
+      "Today hub plus dedicated surfaces for todos, habits, calendar, journal, gratitude, goals, hobbies, and learning content.",
+      "Auth callback flow and protected routes with a single layout shell and sidebar navigation.",
+      "Express routes for domain data (moods, reminders, weekly review, and more) with MongoDB storage.",
+      "Shared package for hobby analytics engines and utilities reused across client and server.",
+    ],
+  },
+  {
+    id: 1005,
+    slug: "jobapplicator",
+    title: "JobApplicator",
+    description:
+      "The active codebase behind my job search dashboard: React 19 on Vite, an Express and MongoDB backend, and the JSearch-powered pipeline for pulling roles, filtering hard requirements like salary and remote, and tracking applications so I never double-submit. This repo is where deployment scripts, API tweaks, and UI experiments land before the public write-up catches up.",
+    gitHubLink: "https://github.com/brandonlublin/JobApplicator",
+    liveDemoUrl: "https://job-applicator.up.railway.app/",
+    img: reactIcon,
+    imgAlt: "React icon",
+    languages: ["React", "TypeScript", "Node", "Express", "MongoDB"],
+    screenshots: [],
+    research: [
+      "Navigated fragmented job-board APIs by leaning on JSearch while still supporting manual adds for listings that will never have a clean feed.",
+      "Tuned pagination and rendering so large result sets stay responsive in React.",
+      "Hardened theme and API configuration for Railway deploys with separate client and server env vars.",
+    ],
+    capabilities: [
+      "Search and filter jobs with salary, remote, and experience-level controls.",
+      "Manual job capture for postings found outside the aggregator.",
+      "Application tracker with status, links, and duplicate protection.",
+      "Light and dark themes persisted for late-night search sessions.",
+    ],
+  },
+  {
+    id: 1006,
+    slug: "snowhound",
+    title: "SnowHound",
+    description:
+      "Snowfall and mountain weather in one obsessive dashboard: compare multiple forecast models side by side, flip between graph, table, and chart views, save favorite ski areas, and dig into hourly breakdowns when a storm is lining up. Built for powder chasers who want signal over hype.",
+    gitHubLink: "https://github.com/brandonlublin/SnowHound",
+    liveDemoUrl: "https://snowhound.me",
+    img: reactIcon,
+    imgAlt: "React icon",
+    languages: ["React", "TypeScript", "Vite", "Tailwind CSS", "Node"],
+    screenshots: [],
+    research: [
+      "Studied how different models disagree on liquid versus frozen precipitation and how to present that without burying users in meteorology jargon.",
+      "Combined map and list UX for resorts and backcountry points so favorites stay one tap away.",
+      "Used Recharts and disciplined state splitting so comparing several model runs stays readable on mobile.",
+    ],
+    capabilities: [
+      "Multi-model snowfall comparison with graph, table, and chart modes.",
+      "Location search, geolocation, and saved favorites for quick recall.",
+      "Seven-day outlooks with hourly drill-downs plus supporting metrics like wind and temperature.",
+      "RSS and alert-style feeds to surface breaking weather updates alongside model data.",
+    ],
+  },
+];
+
 export const profiles = [
   {
     url: 'https://www.linkedin.com/in/brandon-lublin-78a550a8/',

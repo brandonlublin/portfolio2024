@@ -11,6 +11,12 @@ import {
 import './index.css';
 import './fonts.css';
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then(registrations => {
+    registrations.forEach(r => r.unregister());
+  });
+}
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -25,11 +31,6 @@ const router = createBrowserRouter([
   {
     path: '/contact',
     element: <Contact />,
-    errorElement: <NotFound />,
-  },
-  {
-    path: '/about',
-    element: <div>about</div>,
     errorElement: <NotFound />,
   },
   {
