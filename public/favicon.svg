@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <circle cx="32" cy="32" r="32" fill="#2D3A36"/>
+  <text
+    x="32"
+    y="32"
+    dominant-baseline="central"
+    text-anchor="middle"
+    fill="#ffffff"
+    font-family="Georgia, serif"
+    font-size="22"
+    font-weight="bold"
+    letter-spacing="1"
+  >BL</text>
+</svg>
