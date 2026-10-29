@@ -1,0 +1,137 @@
+.page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.inner {
+  max-width: 820px;
+  margin: 0 auto;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+}
+
+.top {
+  background: var(--brand);
+  color: var(--brand-fg);
+}
+
+.top .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+  padding-block: 10px;
+}
+
+.logo {
+  font: bold 28px/1 var(--font-head);
+  letter-spacing: -1px;
+  color: var(--brand-fg);
+  text-decoration: none;
+}
+
+.logo small {
+  display: block;
+  font: 10px var(--font-ui);
+  letter-spacing: 0;
+  opacity: 0.85;
+  padding-top: 3px;
+}
+
+.search {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px;
+}
+
+.search input {
+  font: 11px var(--font-ui);
+  padding: 3px 5px;
+  width: 150px;
+  border: 1px solid #999;
+  border-radius: var(--radius);
+}
+
+.search button {
+  font: 11px var(--font-ui);
+  background: var(--button-bg);
+  color: var(--button-fg);
+  border: 1px solid #999;
+  border-radius: var(--radius);
+  padding: 3px 8px;
+  cursor: pointer;
+}
+
+.noResults {
+  flex-basis: 100%;
+  text-align: right;
+  font-size: 11px;
+}
+
+.nav {
+  background: var(--nav);
+}
+
+.nav .inner {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 2px;
+  padding-block: 5px;
+}
+
+.nav a {
+  color: var(--nav-fg);
+  font-weight: bold;
+  text-decoration: none;
+  padding: 0 8px;
+  border-right: 1px solid currentColor;
+  line-height: 1.1;
+}
+
+.nav a:first-child {
+  padding-left: 0;
+}
+
+.nav a:last-child {
+  border-right: 0;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+.sheet {
+  flex: 1;
+  max-width: 820px;
+  width: 100%;
+  margin: 0 auto;
+  background: var(--sheet);
+  padding-block: 10px 28px;
+}
+
+.sheet > .inner {
+  padding-left: max(12px, env(safe-area-inset-left, 0px));
+  padding-right: max(12px, env(safe-area-inset-right, 0px));
+}
+
+.skinBar {
+  padding-bottom: 12px;
+}
+
+.footer {
+  max-width: 820px;
+  width: 100%;
+  margin: 0 auto;
+  background: var(--sheet);
+  border-top: 1px solid var(--box-line);
+  text-align: center;
+  color: var(--muted);
+  padding-block: 16px;
+}
+
+.footer p {
+  margin: 4px 0 0;
+}

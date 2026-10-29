@@ -1,3 +1,4 @@
+import { Project } from '../types';
 import recipeIcon from '../assets/icons/recipe.png';
 import reactIcon from '../assets/icons/react.png';
 import typescriptIcon from '../assets/icons/typescript.png';
@@ -204,30 +205,6 @@ export const vibeProjects: Project[] = [
     ],
   },
   {
-    id: 1005,
-    slug: "jobapplicator",
-    title: "JobApplicator",
-    description:
-      "The active codebase behind my job search dashboard: React 19 on Vite, an Express and MongoDB backend, and the JSearch-powered pipeline for pulling roles, filtering hard requirements like salary and remote, and tracking applications so I never double-submit. This repo is where deployment scripts, API tweaks, and UI experiments land before the public write-up catches up.",
-    gitHubLink: "https://github.com/brandonlublin/JobApplicator",
-    liveDemoUrl: "https://job-applicator.up.railway.app/",
-    img: reactIcon,
-    imgAlt: "React icon",
-    languages: ["React", "TypeScript", "Node", "Express", "MongoDB"],
-    screenshots: [],
-    research: [
-      "Navigated fragmented job-board APIs by leaning on JSearch while still supporting manual adds for listings that will never have a clean feed.",
-      "Tuned pagination and rendering so large result sets stay responsive in React.",
-      "Hardened theme and API configuration for Railway deploys with separate client and server env vars.",
-    ],
-    capabilities: [
-      "Search and filter jobs with salary, remote, and experience-level controls.",
-      "Manual job capture for postings found outside the aggregator.",
-      "Application tracker with status, links, and duplicate protection.",
-      "Light and dark themes persisted for late-night search sessions.",
-    ],
-  },
-  {
     id: 1006,
     slug: "snowhound",
     title: "SnowHound",
@@ -351,3 +328,36 @@ export const peerFeedback = [
     feedback: "I had the pleasure of working with Brandon, and I was consistently impressed by his dedication and growth mindset. He brought strong front-end engineering skills, a thoughtful approach, and a genuine passion for building great software. What truly stood out was his commitment to growth: steadily evolving into a capable full-stack engineer by asking the right questions, diving deep into backend systems, and always seeking to understand the bigger picture.\nCollaborating with Brandon on features was not only productive but genuinely enjoyable. He took ownership of his work, cared deeply about doing things systematically, and consistently brought a positive, can-do attitude to every project. Brandon is thoughtful, reliable, communicative, and driven, always committed to doing things the right way.\nHis positive energy, sense of responsibility, and willingness to support teammates made him a real asset to the team. Any team would be fortunate to have him on board as a dependable and highly motivated engineer."
   }
 ]
+export const profile = {
+  name: 'Brandon',
+  fullName: 'Brandon Lublin',
+  headline: '"ship it, then make it better"',
+  occupation: 'Software Engineer',
+  location: ['Tacoma, Washington', 'United States'],
+  resumeUrl: 'https://docs.google.com/document/d/1aN8CQ0Bq2DaJla_W29cGK7GUTvjswCrw_rp0mQ0vMaQ/edit?tab=t.0',
+  githubUrl: 'https://github.com/brandonlublin',
+  githubUser: 'brandonlublin',
+  linkedinUrl: 'https://www.linkedin.com/in/brandon-lublin-78a550a8/',
+  siteUrl: 'https://brandonlublin.com/',
+};
+
+export const interests = [
+  { label: 'General', value: 'Snowboarding, golf, sourdough, travel, and building tools I actually use' },
+  { label: 'Languages', value: 'TypeScript, JavaScript, Ruby' },
+  { label: 'Frontend', value: 'React, Vite, CSS Modules, Tailwind, Formik' },
+  { label: 'Backend', value: 'Node, Express, MongoDB, Supabase' },
+  { label: 'Testing', value: 'TestCafe, Playwright, Vitest' },
+  { label: 'Heroes', value: 'Anyone who writes a good postmortem' },
+];
+
+export const profileDetails = [
+  { label: 'Status', value: 'Shipping' },
+  { label: 'Here for', value: 'Networking, Collaboration' },
+  { label: 'Occupation', value: 'Software Engineer, Identity and Access Management' },
+  { label: 'Focus', value: quirks.join(', ') },
+];
+
+export const blurbs = {
+  aboutMe: skills.map((skill) => skill.description),
+  meet: 'Teams that care about ownership, reliability, and shipping features people notice. Bonus points if you have opinions about state management.',
+};

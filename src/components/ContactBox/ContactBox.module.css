@@ -1,0 +1,17 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4px;
+}
+
+.grid a {
+  display: block;
+  background: var(--cell-bg);
+  padding: 6px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.grid a:hover {
+  text-decoration: underline;
+}

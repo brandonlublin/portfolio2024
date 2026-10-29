@@ -9,7 +9,6 @@ import {
   RouterProvider,
 } from 'react-router-dom';
 import './index.css';
-import './fonts.css';
 
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker.getRegistrations().then(registrations => {

@@ -1,75 +1,87 @@
-import AboutMe from "../components/AboutMe/AboutMe";
-import Details from "../components/Details/Details";
-import { useState, useEffect } from 'react';
-import { useNavigate, useParams } from 'react-router-dom';
-import ProjectDetails from "../components/ProjectDetails/ProjectDetails";
-import '../index.css';
-import Header from '../components/Header/Header';
-import { Project } from '../types';
-import { projects, vibeProjects } from '../data/data';
-
-const slugify = (text: string): string => {
-  return text
-    .toLowerCase()
-    .replace(/[^\w\s-]/g, '') // Remove special characters
-    .replace(/\s+/g, '-') // Replace spaces with hyphens
-    .replace(/-+/g, '-') // Replace multiple hyphens with single hyphen
-    .trim();
-};
-
-const projectSlug = (p: Project): string => p.slug ?? slugify(p.title);
-
-const allProjects: Project[] = [...projects, ...vibeProjects];
-
-const findProjectBySlug = (slug: string): Project | undefined => {
-  return allProjects.find((p) => projectSlug(p) === slug);
-};
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
+import ProfileLayout from '../components/ProfileLayout/ProfileLayout';
+import ProfileCard from '../components/ProfileCard/ProfileCard';
+import MusicPlayer from '../components/MusicPlayer/MusicPlayer';
+import ContactBox from '../components/ContactBox/ContactBox';
+import { InfoBox, InfoTable } from '../components/InfoBox/InfoBox';
+import LatestActivity from '../components/LatestActivity/LatestActivity';
+import TopFriends from '../components/TopFriends/TopFriends';
+import FriendComments from '../components/FriendComments/FriendComments';
+import ProjectDetails from '../components/ProjectDetails/ProjectDetails';
+import { blurbs, interests, profile, profileDetails, workHistory } from '../data/data';
+import { findProjectBySlug } from '../utils/projects';
+import styles from './Home.module.css';
 
 const Home = () => {
   const navigate = useNavigate();
   const { slug } = useParams<{ slug: string }>();
-  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const selectedProject = slug ? findProjectBySlug(slug) : undefined;
 
-  useEffect(() => {
-    if (slug) {
-      const project = findProjectBySlug(slug);
-      if (project) {
-        setSelectedProject(project);
-      } else {
-        navigate('/404', { replace: true });
-      }
-    } else {
-      setSelectedProject(null);
-    }
-  }, [slug, navigate]);
-
-  const openProjectDetails = (project: Project) => {
-    navigate(`/project/${projectSlug(project)}`);
-  };
-
-  const closeProjectDetails = () => {
-    navigate('/');
-  };
+  if (slug && !selectedProject) {
+    return <Navigate to='/404' replace />;
+  }
 
   return (
-    <div className='app'>
-      <Header />
-      <div className='appContainer'>
-        {selectedProject ? (
-          <ProjectDetails project={selectedProject} onBack={closeProjectDetails} />
-        ) : (
-          <>
-            <div className='aboutMe'>
-              <AboutMe />
-            </div>
-            <div className='details'>
-              <Details openProjectDetails={openProjectDetails} selectedProject={selectedProject} />
-            </div>
-          </>
-        )}
-      </div>
-    </div>
+    <ProfileLayout>
+      {selectedProject ? (
+        <ProjectDetails project={selectedProject} onBack={() => navigate('/#top8')} />
+      ) : (
+        <div className={styles.profile}>
+          <div className={`${styles.column} ${styles.identity}`}>
+            <ProfileCard />
+            <MusicPlayer />
+            <ContactBox />
+            <section className={styles.url}>
+              <b>BrandonSpace URL:</b>
+              <a href={profile.siteUrl}>{profile.siteUrl}</a>
+            </section>
+          </div>
+
+          <div className={`${styles.column} ${styles.rail}`}>
+            <InfoBox title={`${profile.name}'s Interests`}>
+              <InfoTable rows={interests} />
+            </InfoBox>
+            <InfoBox title={`${profile.name}'s Details`}>
+              <InfoTable rows={profileDetails} />
+            </InfoBox>
+            <InfoBox title={`${profile.name}'s Companies`}>
+              <InfoTable
+                rows={workHistory.map((job) => ({
+                  label: job.company,
+                  value: (
+                    <>
+                      {job.title}
+                      <br />
+                      {job.location}
+                      <br />
+                      {job.dates}
+                    </>
+                  ),
+                }))}
+              />
+            </InfoBox>
+          </div>
+
+          <div className={`${styles.column} ${styles.main}`}>
+            <p className={styles.extended}>{profile.name} is in your extended network</p>
+            <LatestActivity />
+            <InfoBox title={`${profile.name}'s Blurbs`}>
+              <div className={styles.blurbs}>
+                <h3>About me:</h3>
+                {blurbs.aboutMe.map((text) => (
+                  <p key={text}>{text}</p>
+                ))}
+                <h3>Who I&apos;d like to meet:</h3>
+                <p>{blurbs.meet}</p>
+              </div>
+            </InfoBox>
+            <TopFriends />
+            <FriendComments />
+          </div>
+        </div>
+      )}
+    </ProfileLayout>
   );
-}
+};
 
 export default Home;
