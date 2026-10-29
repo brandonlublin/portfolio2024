@@ -1,5 +1,5 @@
-import { FormEvent, ReactNode, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { FormEvent, ReactNode, useEffect, useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import SkinPicker from '../SkinPicker/SkinPicker';
 import { profile } from '../../data/data';
 import { projectSlug, searchProjects } from '../../utils/projects';
@@ -11,8 +11,18 @@ type ProfileLayoutProps = {
 
 const ProfileLayout = ({ children }: ProfileLayoutProps) => {
   const navigate = useNavigate();
+  const { pathname, hash, key } = useLocation();
   const [query, setQuery] = useState('');
   const [noResults, setNoResults] = useState(false);
+
+  useEffect(() => {
+    const target = hash ? document.getElementById(hash.slice(1)) : null;
+    if (target) {
+      target.scrollIntoView();
+    } else {
+      window.scrollTo(0, 0);
+    }
+  }, [pathname, hash, key]);
 
   const handleSearch = (e: FormEvent) => {
     e.preventDefault();

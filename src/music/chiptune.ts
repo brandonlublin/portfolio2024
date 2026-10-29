@@ -68,6 +68,7 @@ export class Chiptune {
 
     while (this.nextTime < ctx.currentTime + LOOKAHEAD_SECONDS) {
       if (this.step >= totalSteps) {
+        if (ctx.currentTime < this.nextTime) break;
         this.pause();
         this.step = 0;
         this.onEnd();

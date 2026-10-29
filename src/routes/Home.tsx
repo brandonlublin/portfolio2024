@@ -1,5 +1,4 @@
-import { useEffect } from 'react';
-import { Navigate, useLocation, useNavigate, useParams } from 'react-router-dom';
+import { Navigate, useNavigate, useParams } from 'react-router-dom';
 import ProfileLayout from '../components/ProfileLayout/ProfileLayout';
 import ProfileCard from '../components/ProfileCard/ProfileCard';
 import MusicPlayer from '../components/MusicPlayer/MusicPlayer';
@@ -15,18 +14,8 @@ import styles from './Home.module.css';
 
 const Home = () => {
   const navigate = useNavigate();
-  const { hash, key } = useLocation();
   const { slug } = useParams<{ slug: string }>();
   const selectedProject = slug ? findProjectBySlug(slug) : undefined;
-
-  useEffect(() => {
-    const target = !slug && hash ? document.getElementById(hash.slice(1)) : null;
-    if (target) {
-      target.scrollIntoView();
-    } else {
-      window.scrollTo(0, 0);
-    }
-  }, [slug, hash, key]);
 
   if (slug && !selectedProject) {
     return <Navigate to='/404' replace />;
