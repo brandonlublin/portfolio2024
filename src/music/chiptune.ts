@@ -17,13 +17,20 @@ export class Chiptune {
   private song: ChipSong | null = null;
   private step = 0;
   private nextTime = 0;
+  private voices = new Set<OscillatorNode>();
 
   onProgress: (seconds: number) => void = () => undefined;
   onEnd: () => void = () => undefined;
 
   load(song: ChipSong) {
+    this.voices.forEach((osc) => {
+      osc.stop();
+      osc.disconnect();
+    });
+    this.voices.clear();
     this.song = song;
     this.step = 0;
+    this.nextTime = 0;
     this.onProgress(0);
   }
 
@@ -36,7 +43,7 @@ export class Chiptune {
       this.master.connect(this.ctx.destination);
     }
     this.ctx.resume();
-    this.nextTime = this.ctx.currentTime + 0.05;
+    this.nextTime = Math.max(this.nextTime, this.ctx.currentTime + 0.05);
     window.clearInterval(this.timer);
     this.timer = window.setInterval(() => this.schedule(), TICK_MS);
   }
@@ -86,6 +93,8 @@ export class Chiptune {
     gain.gain.setValueAtTime(volume, this.nextTime);
     gain.gain.exponentialRampToValueAtTime(0.0001, this.nextTime + duration);
     osc.connect(gain).connect(this.master);
+    osc.onended = () => this.voices.delete(osc);
+    this.voices.add(osc);
     osc.start(this.nextTime);
     osc.stop(this.nextTime + duration + 0.02);
   }

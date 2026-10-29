@@ -15,19 +15,18 @@ import styles from './Home.module.css';
 
 const Home = () => {
   const navigate = useNavigate();
-  const { hash } = useLocation();
+  const { hash, key } = useLocation();
   const { slug } = useParams<{ slug: string }>();
   const selectedProject = slug ? findProjectBySlug(slug) : undefined;
 
   useEffect(() => {
-    if (slug) {
+    const target = !slug && hash ? document.getElementById(hash.slice(1)) : null;
+    if (target) {
+      target.scrollIntoView();
+    } else {
       window.scrollTo(0, 0);
-      return;
     }
-    if (hash) {
-      document.getElementById(hash.slice(1))?.scrollIntoView();
-    }
-  }, [slug, hash]);
+  }, [slug, hash, key]);
 
   if (slug && !selectedProject) {
     return <Navigate to='/404' replace />;
