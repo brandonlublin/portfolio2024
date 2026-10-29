@@ -1,0 +1,54 @@
+.name {
+  font: bold 20px var(--font-head);
+  margin: 0 0 6px;
+}
+
+.card {
+  display: grid;
+  grid-template-columns: 130px minmax(0, 1fr);
+  gap: 10px;
+}
+
+.photo {
+  width: 130px;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border: 1px solid var(--box-line);
+  border-radius: var(--radius);
+  display: block;
+}
+
+.facts p {
+  margin: 0 0 2px;
+}
+
+.login {
+  padding-top: 8px;
+}
+
+.online {
+  color: var(--online);
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 6px;
+}
+
+.online i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--online);
+  animation: blink 1.4s steps(2) infinite;
+}
+
+.viewMy {
+  margin: 8px 0 0;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.2;
+  }
+}

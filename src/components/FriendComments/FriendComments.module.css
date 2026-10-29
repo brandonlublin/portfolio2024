@@ -1,0 +1,62 @@
+.count {
+  margin: 0 0 6px;
+  font-weight: bold;
+}
+
+.count b {
+  color: var(--hot);
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 2px;
+}
+
+.table td {
+  vertical-align: top;
+  padding: 8px;
+}
+
+.who {
+  width: 110px;
+  background: var(--friend-bg);
+  text-align: center;
+}
+
+.author {
+  display: block;
+  color: var(--link);
+  font-weight: bold;
+}
+
+.avatar {
+  width: 54px;
+  height: 54px;
+  margin: 6px auto 0;
+  display: grid;
+  place-items: center;
+  background: var(--box-line);
+  color: var(--sheet);
+  border-radius: var(--radius);
+  font: bold 18px var(--font-head);
+}
+
+.what {
+  background: var(--cell-bg);
+}
+
+.what p {
+  margin: 0 0 6px;
+  max-width: 65ch;
+}
+
+.what p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 760px) {
+  .who {
+    width: 80px;
+  }
+}

@@ -1,9 +1,9 @@
-import { useState, useEffect, useRef } from 'react';
-import { motion } from 'framer-motion';
-import styles from './ProjectDetails.module.css';
+import { ReactNode } from 'react';
 import { Project } from '../../types';
-import ScrollToTop from '../ScrollToTop/ScrollToTop';
-import { fadeInScale, defaultTransition, staggerContainer, staggerItem } from '../../utils/animations';
+import { profile } from '../../data/data';
+import FriendPic from '../FriendPic/FriendPic';
+import { InfoBox, InfoTable } from '../InfoBox/InfoBox';
+import styles from './ProjectDetails.module.css';
 
 type ProjectProps = {
   project: Project;
@@ -11,126 +11,80 @@ type ProjectProps = {
 };
 
 const ProjectDetails = ({ project, onBack }: ProjectProps) => {
-  const [showScrollButton, setShowScrollButton] = useState(false);
-  const contentRef = useRef<HTMLDivElement>(null);
-
-  const handleScroll = () => {
-    if (contentRef.current) {
-      const position = contentRef.current.scrollTop;
-      setShowScrollButton(position > 50);
-    }
-  };
-
-  const scrollToTop = () => {
-    if (contentRef.current) {
-      contentRef.current.scrollTo({
-        top: 0,
-        behavior: 'smooth',
-      });
-    }
-  };
-
-  useEffect(() => {
-    const contentElement = contentRef.current;
-    if (contentElement) {
-      contentElement.addEventListener('scroll', handleScroll, { passive: true });
-      handleScroll(); // Check initial scroll position
-
-      return () => {
-        contentElement.removeEventListener('scroll', handleScroll);
-      };
-    }
-  }, []);
+  const links: { label: string; value: ReactNode }[] = [
+    { label: 'Source', value: <a href={project.gitHubLink} target='_blank' rel='noopener noreferrer'>View on GitHub</a> },
+    { label: 'Stack', value: project.languages.join(', ') },
+  ];
+  if (project.liveDemoUrl) {
+    links.unshift({ label: 'Live demo', value: <a href={project.liveDemoUrl} target='_blank' rel='noopener noreferrer'>View live demo</a> });
+  }
 
   return (
-  <motion.div
-    ref={contentRef}
-    className={styles.projectDetailsContent}
-    {...fadeInScale}
-    transition={defaultTransition}
-  >
-    <motion.button
-      className={styles.backButton}
-      onClick={onBack}
-      whileHover={{ x: -5 }}
-      whileTap={{ scale: 0.95 }}
-      transition={{ duration: 0.2 }}
-    >
-      <span className={styles.backArrow}></span>
-    </motion.button>
-    <div className={styles.projectHeader}>
-      {project.img ? (
-        <img src={project.img} alt={project.imgAlt} />
-      ) : null}
-      <h2 className={styles.projectTitle}>{project.title}</h2>
-    </div>
-    {project.liveDemoUrl && (
-      <div className={styles.liveDemoLink}>
-        <a href={project.liveDemoUrl} target="_blank" rel="noopener noreferrer">
-          View Live Demo
-        </a>
+    <div className={styles.page}>
+      <button className={styles.back} type='button' onClick={onBack}>
+        « Back to {profile.name}&apos;s profile
+      </button>
+      <div className={styles.profile}>
+        <div className={styles.column}>
+          <section>
+            <h1 className={styles.title}>{project.title}</h1>
+            <FriendPic project={project} size='large' />
+            <p className={styles.status}>Built by {profile.fullName}</p>
+          </section>
+          <InfoBox title={`${project.title}'s Details`}>
+            <InfoTable rows={links} />
+          </InfoBox>
+        </div>
+
+        <div className={styles.column}>
+          <p className={styles.extended}>{project.title} is in your extended network</p>
+          <InfoBox title={`About ${project.title}`}>
+            <p className={styles.text}>{project.description}</p>
+          </InfoBox>
+          {project.research.length > 0 && (
+            <InfoBox title='Research'>
+              <ul className={styles.list}>
+                {project.research.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </InfoBox>
+          )}
+          {project.capabilities.length > 0 && (
+            <InfoBox title='Capabilities'>
+              <ul className={styles.list}>
+                {project.capabilities.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </InfoBox>
+          )}
+          {project.todos && project.todos.length > 0 && (
+            <InfoBox title='To-Dos'>
+              <ul className={styles.list}>
+                {project.todos.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </InfoBox>
+          )}
+          {project.screenshots.length > 0 && (
+            <InfoBox title={`${project.title}'s Photos`} variant='friends'>
+              <ul className={styles.photos}>
+                {project.screenshots.map((shot) => (
+                  <li key={shot.imgUrl}>
+                    <a href={shot.imgUrl} target='_blank' rel='noopener noreferrer'>
+                      <img src={shot.imgUrl} alt={shot.label} loading='lazy' />
+                    </a>
+                    <span>{shot.label}</span>
+                  </li>
+                ))}
+              </ul>
+            </InfoBox>
+          )}
+        </div>
       </div>
-    )}
-    <div className={styles.projectDescription}>{project.description}</div>
-    <div className={styles.projectResearch}>
-      <div className={styles.sectionLabel}>Research</div>
-      <ul>
-        {project?.research?.length && project?.research?.length > 0 && project?.research?.map((research, index) => (
-          <li key={index}>{research}</li>
-        ))}
-      </ul>
     </div>
-    <div className={styles.projectResearch}>
-      <div className={styles.sectionLabel}>Capabilities</div>
-      <ul>
-        {project.capabilities.map((capability, index) => (
-          <li key={index}>{capability}</li>
-        ))}
-      </ul>
-    </div>
-    {project?.todos?.length && project?.todos?.length > 0 && (
-      <div className={styles.todos}>
-        <div className={styles.sectionLabel}>To-Dos</div>
-        <ul>
-          {project?.todos?.map((todo, index) => (
-            <li key={index}>{todo}</li>
-          ))}
-        </ul>
-      </div>
-    )}
-    <motion.div
-      className={styles.projectScreenshots}
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
-      variants={{
-        ...staggerContainer,
-        visible: {
-          ...staggerContainer.visible,
-          transition: {
-            staggerChildren: 0.08
-          }
-        }
-      }}
-    >
-      {project.screenshots.map((screenshot, index) => (
-        <motion.div
-          key={index}
-          variants={staggerItem}
-          transition={defaultTransition}
-        >
-          <img src={screenshot.imgUrl} alt={`Screenshot ${index + 1}`} className={styles.screenshot} />
-          <div className={styles.screenshotLabel}>{screenshot.label}</div>
-        </motion.div>
-      ))}
-    </motion.div>
-    <div className={styles.gitHubLink}>
-      <a href={project.gitHubLink} target="_blank" rel="noopener noreferrer">
-        View GitHub Repository
-      </a>
-    </div>
-    <ScrollToTop show={showScrollButton} onClick={scrollToTop} />
-  </motion.div>
   );
 };
 

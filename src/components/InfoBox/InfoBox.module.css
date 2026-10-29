@@ -1,0 +1,44 @@
+.box {
+  border: 1px solid var(--box-line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  min-width: 0;
+}
+
+.title {
+  margin: 0;
+  background: var(--label-bg);
+  color: var(--hot);
+  font: bold 13px var(--font-head);
+  padding: 5px 8px;
+}
+
+.friends {
+  background: var(--friend-bg);
+}
+
+.body {
+  padding: 8px;
+}
+
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 2px;
+}
+
+.table th {
+  background: var(--label-bg);
+  color: var(--label-fg);
+  text-align: left;
+  vertical-align: top;
+  width: 96px;
+  padding: 4px 6px;
+}
+
+.table td {
+  background: var(--cell-bg);
+  padding: 4px 6px;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}

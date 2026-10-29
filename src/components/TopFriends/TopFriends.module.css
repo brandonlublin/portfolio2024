@@ -1,0 +1,44 @@
+.count {
+  margin: 0 0 10px;
+  font-weight: bold;
+}
+
+.count b {
+  color: var(--hot);
+}
+
+.grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px 8px;
+}
+
+.friend {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+  text-align: center;
+  text-decoration: none;
+}
+
+.name {
+  text-decoration: underline;
+  overflow-wrap: anywhere;
+}
+
+.friend > :last-child {
+  transition: transform 0.15s;
+}
+
+.friend:hover > :last-child {
+  transform: rotate(-2deg) scale(1.05);
+}
+
+@media (max-width: 760px) {
+  .grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
